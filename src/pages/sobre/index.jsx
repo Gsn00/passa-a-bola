@@ -2,10 +2,13 @@ import Header from "../../components/header";
 import Container from "../../components/container";
 import SectionTitle from "../../components/sectiontitle";
 import Footer from "../../components/footer";
+import BackgroundShapes from "../../components/backgroundshapes";
 
 export default function Sobre() {
   return (
     <section>
+      <BackgroundShapes />
+
       <Header />
 
       <Container>
