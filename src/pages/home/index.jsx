@@ -3,7 +3,7 @@ import Header from "../../components/header";
 
 export default function Home() {
   return (
-    <div className="w-full h-[80vh] relative">
+    <section className="relative">
       <Header />
 
       <div className="w-full h-[70vh] flex">
@@ -41,6 +41,6 @@ export default function Home() {
 
       <div className="w-full aspect-square bg-[#EBD4F2] rounded-[50%] fixed top-[35%] left-[50%] z-[-10]"></div>
       <div className="w-full aspect-square bg-[#EBD4F2] rounded-[50%] fixed bottom-[35%] left-[50%] z-[-10]"></div>
-    </div>
+    </section>
   );
 }
