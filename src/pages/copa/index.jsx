@@ -44,8 +44,8 @@ export default function Copa() {
 
         <div className="text-center">
           <a
-            href=""
-            className="relative inline-block px-20 py-3 text-4xl font-bold text-[#690A6C]! bg-transparent rounded-xl shadow-md border-1 transition-all duration-300 hover:bg-[#690A6C] hover:text-white! hover:shadow-xl hover:scale-105 active:scale-95"
+            href="/copa/inscricao"
+            className="px-15 py-2 text-4xl bg-transparent rounded-xl shadow-md cursor-pointer border-1 border-[#690A6C] text-[#690A6C]!"
           >
             Inscreva-se!
           </a>

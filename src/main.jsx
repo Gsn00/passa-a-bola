@@ -9,6 +9,7 @@ import HistoriaSingle from "./pages/historiasingle/index.jsx";
 import Encontros from "./pages/encontros/index.jsx";
 import EncontrosSingle from "./pages/encontrossingle/index.jsx";
 import Copa from "./pages/copa/index.jsx";
+import CopaInscricao from "./pages/copainscricao/index.jsx";
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
   {
     path: "/copa",
     element: <Copa />,
+  },
+  {
+    path: "/copa/inscricao",
+    element: <CopaInscricao />,
   },
 ]);
 

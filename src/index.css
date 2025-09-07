@@ -83,3 +83,14 @@ header a:hover::after {
   transform: scaleX(1);
   transform-origin: left;
 }
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none; /* For Webkit-based browsers (Chrome, Safari, Opera) */
+  margin: 0; /* Removes any default margin */
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* For Firefox */
+  appearance: textfield; /* Standard property for other browsers */
+}

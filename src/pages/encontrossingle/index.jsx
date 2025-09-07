@@ -36,23 +36,23 @@ export default function EncontrosSingle() {
             </p>
           </div>
 
-          <Field title="Nome Completo*">
+          <Field title="Nome Completo">
             <Input type="text" placeholder="Digite seu nome completo..." />
           </Field>
 
-          <Field title="Idade*">
+          <Field title="Idade">
             <Input type="idade" placeholder="Digite sua idade..." />
           </Field>
 
-          <Field title="Cidade/Estado*">
+          <Field title="Cidade e Estado">
             <Input type="idade" placeholder="Digite sua cidade e estado..." />
           </Field>
 
-          <Field title="Telefone/Whatsapp*">
+          <Field title="Telefone/WhatsApp">
             <Input type="idade" placeholder="Digite sua idade..." />
           </Field>
 
-          <Field title="Posição em Campo*">
+          <Field title="Posição em Campo">
             <Select>
               <option value="" className="hidden">
                 Selecione uma opção
