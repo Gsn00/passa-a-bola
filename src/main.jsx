@@ -6,6 +6,9 @@ import App from "./App.jsx";
 import Sobre from "./pages/sobre/index.jsx";
 import Historia from "./pages/historia/index.jsx";
 import HistoriaSingle from "./pages/historiasingle/index.jsx";
+import Encontros from "./pages/encontros/index.jsx";
+import EncontrosSingle from "./pages/encontrossingle/index.jsx";
+import Copa from "./pages/copa/index.jsx";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +26,18 @@ const router = createBrowserRouter([
   {
     path: "/historia/*",
     element: <HistoriaSingle />,
+  },
+  {
+    path: "/encontros",
+    element: <Encontros />,
+  },
+  {
+    path: "/encontros/*",
+    element: <EncontrosSingle />,
+  },
+  {
+    path: "/copa",
+    element: <Copa />,
   },
 ]);
 

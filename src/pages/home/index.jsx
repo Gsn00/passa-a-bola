@@ -1,9 +1,10 @@
 import BulletPoint from "../../components/bulletpoint";
 import Header from "../../components/header";
+import Pagination from "../../components/pagination";
 
 export default function Home() {
   return (
-    <section className="relative">
+    <section className="relative select-none">
       <Header />
 
       <div className="w-full h-[70vh] flex">
@@ -29,15 +30,13 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="w-full h-[10vh] flex justify-center items-center gap-10">
-        <div className="w-auto flex gap-10 bg-[#D8D1D1] py-5 px-10 rounded-md shadow-md">
-          <BulletPoint selected={true} />
-          <BulletPoint />
-          <BulletPoint />
-          <BulletPoint />
-          <BulletPoint />
-        </div>
-      </div>
+      <Pagination>
+        <BulletPoint selected={true} />
+        <BulletPoint />
+        <BulletPoint />
+        <BulletPoint />
+        <BulletPoint />
+      </Pagination>
 
       <div className="w-full aspect-square bg-[#EBD4F2] rounded-[50%] fixed top-[35%] left-[50%] z-[-10]"></div>
       <div className="w-full aspect-square bg-[#EBD4F2] rounded-[50%] fixed bottom-[35%] left-[50%] z-[-10]"></div>

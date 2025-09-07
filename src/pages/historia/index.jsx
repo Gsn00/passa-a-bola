@@ -7,6 +7,7 @@ import Input from "../../components/input";
 import { Search, ChevronsLeft, ChevronsRight } from "lucide-react";
 import CardHistoria from "../../components/cardhistoria";
 import BulletPoint from "../../components/bulletpoint";
+import Pagination from "../../components/pagination";
 
 export default function Historia() {
   return (
@@ -56,19 +57,13 @@ export default function Historia() {
           />
         </div>
 
-        <div className="max-w-xl w-full p-5 flex justify-center items-center gap-5 bg-[#D8D1D1] rounded-md shadow-md mx-auto">
-          <button className="cursor-pointer">
-            <ChevronsLeft />
-          </button>
+        <Pagination>
           <BulletPoint selected={true}>1</BulletPoint>
           <BulletPoint>2</BulletPoint>
           <BulletPoint>3</BulletPoint>
           <BulletPoint>4</BulletPoint>
           <BulletPoint>5</BulletPoint>
-          <button className="cursor-pointer">
-            <ChevronsRight />
-          </button>
-        </div>
+        </Pagination>
 
         <Footer />
       </Container>
