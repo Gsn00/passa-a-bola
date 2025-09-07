@@ -8,9 +8,7 @@ export default function Sobre() {
   return (
     <section>
       <BackgroundShapes />
-
       <Header />
-
       <Container>
         <SectionTitle textgray="Sobre o" textpurple="Passa a Bola" />
 

@@ -4,6 +4,8 @@ import { RouterProvider } from "react-router/dom";
 import "./index.css";
 import App from "./App.jsx";
 import Sobre from "./pages/sobre/index.jsx";
+import Historia from "./pages/historia/index.jsx";
+import HistoriaSingle from "./pages/historiasingle/index.jsx";
 
 const router = createBrowserRouter([
   {
@@ -13,6 +15,14 @@ const router = createBrowserRouter([
   {
     path: "/sobre",
     element: <Sobre />,
+  },
+  {
+    path: "/historia",
+    element: <Historia />,
+  },
+  {
+    path: "/historia/*",
+    element: <HistoriaSingle />,
   },
 ]);
 

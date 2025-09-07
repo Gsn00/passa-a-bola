@@ -6,12 +6,12 @@ export default function Header() {
           <img src="/images/logo01.png" alt="" />
         </div>
         <a href="/">Início</a>
-        <a href="/sobre">Sobre</a>
-        <a href="">História</a>
         <a href="">Encontros</a>
         <a href="">Peneiras</a>
         <a href="">Copa</a>
-        <a href="">Login</a>
+        <a href="/historia">História</a>
+        <a href="/sobre">Sobre</a>
+        <a href="">Minha Conta</a>
       </div>
     </header>
   );

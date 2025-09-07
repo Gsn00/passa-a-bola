@@ -8,6 +8,13 @@
 @font-face {
   font-family: "League Spartan";
   src: url("assets/fonts/LeagueSpartan-Bold.otf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "League Spartan";
+  src: url("assets/fonts/LeagueSpartan-Light.ttf");
+  font-weight: lighter;
 }
 
 @font-face {
@@ -49,4 +56,8 @@ body {
 
 #root {
   height: 100%;
+}
+
+svg * {
+  color: #2d2d2d;
 }
