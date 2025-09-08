@@ -7,7 +7,7 @@ export default function Header() {
         </div>
         <a href="/">Início</a>
         <a href="/encontros">Encontros</a>
-        <a href="">Peneiras</a>
+        <a href="/peneiras">Peneiras</a>
         <a href="/copa">Copa</a>
         <a href="/historia">História</a>
         <a href="/sobre">Sobre</a>

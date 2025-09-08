@@ -9,18 +9,18 @@ export default function Home() {
 
       <div className="w-full h-[70vh] flex">
         <div className="w-[50%] h-full flex flex-col gap-15 justify-center px-30">
-          <h1 className="font-bold font-[League_Spartan] text-7xl text-[#9D10A2]! relative tracking-wide">
-            Passa a Bola
-            <div className="absolute w-[300px] h-2 bg-[#5C0C5F] -bottom-5"></div>
+          <h1 className="font-bold font-[League_Spartan] text-5xl text-[#9D10A2]! relative tracking-wide">
+            Passa a Bola 
+            <div className="absolute w-[200px] h-2 bg-[#5C0C5F] -bottom-5"></div>
           </h1>
-          <p className="tracking-widest font-[Poppins] text-lg text-justify">
+          <p className="tracking-widest font-[Poppins] text-md text-justify">
             O Passa a Bola nasceu com um propósito claro: fortalecer a presença
             das mulheres no futebol e abrir caminhos reais para quem sonha em ir
             além dos treinos. Aqui, o esporte é levado a sério — e o talento
             feminino, valorizado.
           </p>
           <div className="w-full text-center">
-            <button className="bg-[#9D10A2] py-3 px-30 text-white! text-xl rounded-md shadow-md cursor-pointer font-[Open_Sans]">
+            <button className="bg-[#9D10A2] py-3 px-30 text-white! text-lg rounded-md shadow-md cursor-pointer font-[Open_Sans]">
               Saiba Mais
             </button>
           </div>
