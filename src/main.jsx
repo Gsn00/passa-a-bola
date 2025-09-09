@@ -11,6 +11,9 @@ import EncontrosSingle from "./pages/encontrossingle/index.jsx";
 import Copa from "./pages/copa/index.jsx";
 import CopaInscricao from "./pages/copainscricao/index.jsx";
 import Peneiras from "./pages/peneiras/index.jsx";
+import PeneirasSingle from "./pages/peneirassingle/index.jsx";
+import Login from "./pages/login/index.jsx";
+import Register from "./pages/register/index.jsx";
 
 const router = createBrowserRouter([
   {
@@ -48,6 +51,18 @@ const router = createBrowserRouter([
   {
     path: "/peneiras",
     element: <Peneiras />,
+  },
+  {
+    path: "/peneiras/inscricao",
+    element: <PeneirasSingle />,
+  },
+  {
+    path: "/login",
+    element: <Login />,
+  },
+  {
+    path: "/register",
+    element: <Register />,
   },
 ]);
 

@@ -11,7 +11,7 @@ export default function Header() {
         <a href="/copa">Copa</a>
         <a href="/historia">História</a>
         <a href="/sobre">Sobre</a>
-        <a href="">Minha Conta</a>
+        <a href="/login">Minha Conta</a>
       </div>
     </header>
   );

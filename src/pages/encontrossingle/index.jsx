@@ -1,4 +1,5 @@
 import BackgroundShapes from "../../components/backgroundshapes";
+import Button from "../../components/button";
 import CardEncontros from "../../components/cardencontros";
 import Container from "../../components/container";
 import Field from "../../components/field";
@@ -48,8 +49,11 @@ export default function EncontrosSingle() {
             <Input type="idade" placeholder="Digite sua cidade e estado..." />
           </Field>
 
-          <Field title="Telefone/WhatsApp">
-            <Input type="idade" placeholder="Digite sua idade..." />
+          <Field title="WhatsApp">
+            <Input
+              type="idade"
+              placeholder="Digite seu número do whatsapp..."
+            />
           </Field>
 
           <Field title="Posição em Campo">
@@ -66,9 +70,7 @@ export default function EncontrosSingle() {
           </Field>
 
           <div className="text-center">
-            <button className="px-5 py-1 bg-transparent rounded-md cursor-pointer border-1 border-[#690A6C] text-[#690A6C]!">
-              Confirmar Inscrição
-            </button>
+            <Button>Confirmar Inscrição</Button>
           </div>
         </div>
 

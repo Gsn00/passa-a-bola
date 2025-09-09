@@ -45,7 +45,7 @@ export default function Copa() {
         <div className="text-center">
           <a
             href="/copa/inscricao"
-            className="px-15 py-2 text-4xl bg-transparent rounded-xl shadow-md cursor-pointer border-1 border-[#690A6C] text-[#690A6C]!"
+            className="px-15 py-3 text-4xl bg-transparent rounded-xl shadow-md cursor-pointer border-1 border-[#690A6C] text-[#690A6C]! font-[League_Spartan]"
           >
             Inscreva-se!
           </a>

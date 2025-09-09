@@ -7,6 +7,7 @@ import Field from "../../components/field";
 import Input from "../../components/input";
 import Select from "../../components/select";
 import Checkbox from "../../components/checkbox";
+import Button from "../../components/button";
 
 export default function CopaInscricao() {
   return (
@@ -51,10 +52,10 @@ export default function CopaInscricao() {
           <Field title="E-mail de Contato">
             <Input type="email" placeholder="Digite o e-mail para contato..." />
           </Field>
-          <Field title="Telefone/WhatsApp">
+          <Field title="WhatsApp de Contato">
             <Input
               type="text"
-              placeholder="Digite o telefone/whatsapp para contato..."
+              placeholder="Digite seu número de whatsapp para contato..."
             />
           </Field>
 
@@ -65,9 +66,7 @@ export default function CopaInscricao() {
           </div>
 
           <div className="text-center mt-5">
-            <button className="px-5 py-1 bg-transparent rounded-md cursor-pointer border-1 border-[#690A6C] text-[#690A6C]!">
-              Confirmar Inscrição
-            </button>
+            <Button>Confirmar Inscrição</Button>
           </div>
         </div>
 

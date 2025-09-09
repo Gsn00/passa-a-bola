@@ -10,7 +10,7 @@ export default function Home() {
       <div className="w-full h-[70vh] flex">
         <div className="w-[50%] h-full flex flex-col gap-15 justify-center px-30">
           <h1 className="font-bold font-[League_Spartan] text-5xl text-[#9D10A2]! relative tracking-wide">
-            Passa a Bola 
+            Passa a Bola
             <div className="absolute w-[200px] h-2 bg-[#5C0C5F] -bottom-5"></div>
           </h1>
           <p className="tracking-widest font-[Poppins] text-md text-justify">
