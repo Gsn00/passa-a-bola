@@ -14,9 +14,9 @@ export default function Copa() {
         <Header />
         <HeaderMobile />
 
-        <div className="max-lg:w-[100vw] max-lg:ml-[-20px] lg:rounded-lg shadow-xl">
+        <div className="w-full rounded-lg shadow-xl">
           <img
-            className="w-full object-cover max-lg:h-[50vh] lg:rounded-xl mb-15"
+            className="w-full object-cover max-lg:h-[50vh] rounded-xl mb-15"
             src="/images/copa-01.png"
             alt=""
           />
