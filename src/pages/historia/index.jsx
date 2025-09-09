@@ -8,6 +8,7 @@ import { Search, ChevronsLeft, ChevronsRight } from "lucide-react";
 import CardHistoria from "../../components/cardhistoria";
 import BulletPoint from "../../components/bulletpoint";
 import Pagination from "../../components/pagination";
+import HeaderMobile from "../../components/headermobile";
 
 export default function Historia() {
   return (
@@ -15,6 +16,7 @@ export default function Historia() {
       <Container>
         <BackgroundShapes />
         <Header />
+        <HeaderMobile />
         <SectionTitle textgray="História do" textpurple="Futebol Feminino" />
 
         <div className="max-w-xl w-full p-5 flex gap-5 bg-[#D8D1D1] rounded-md shadow-md mx-auto mb-15">
@@ -24,7 +26,7 @@ export default function Historia() {
           </button>
         </div>
 
-        <div className="grid grid-cols-3 gap-10 mb-15">
+        <div className="grid lg:grid-cols-3 gap-10 mb-15">
           <CardHistoria
             href="/historia/historia01"
             src="/images/historia-01.jpg"

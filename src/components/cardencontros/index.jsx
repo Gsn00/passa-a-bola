@@ -20,7 +20,7 @@ export default function CardEncontros(props) {
         <div className="text-center mt-auto">
           <a
             href={props.href}
-            className="px-5 py-1 bg-transparent rounded-md cursor-pointer border-1 border-[#690A6C] text-[#690A6C]!"
+            className="px-5 py-2 bg-transparent rounded-md cursor-pointer border-1 border-[#690A6C] text-[#690A6C]! font-[League_Spartan]"
           >
             Quero Participar!
           </a>

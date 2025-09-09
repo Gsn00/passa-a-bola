@@ -2,6 +2,7 @@ import BackgroundShapes from "../../components/backgroundshapes";
 import Container from "../../components/container";
 import Footer from "../../components/footer";
 import Header from "../../components/header";
+import HeaderMobile from "../../components/headermobile";
 import HistoriaSection from "../../components/historiasection";
 import SectionTitle from "../../components/sectiontitle";
 
@@ -11,9 +12,10 @@ export default function HistoriaSingle() {
       <Container>
         <BackgroundShapes />
         <Header />
+        <HeaderMobile />
         <SectionTitle textgray="História do" textpurple="Futebol Feminino" />
 
-        <div className="flex flex-col gap-10 font-[League_Spartan] px-30">
+        <div className="flex flex-col gap-10 font-[League_Spartan] lg:px-30">
           <HistoriaSection title="A Primeira Partida de Futebol Feminino no Brasil">
             O futebol é, sem dúvida, uma das maiores paixões nacionais. No
             entanto, sua história no Brasil não foi marcada apenas por vitórias

@@ -9,6 +9,7 @@ import Select from "../../components/select";
 import Textarea from "../../components/textearea";
 import Button from "../../components/button";
 import Checkbox from "../../components/checkbox";
+import HeaderMobile from "../../components/headermobile";
 
 export default function PeneirasSingle() {
   return (
@@ -16,6 +17,7 @@ export default function PeneirasSingle() {
       <Container>
         <BackgroundShapes />
         <Header />
+        <HeaderMobile />
         <SectionTitle textgray="Peneiras" textpurple="Online" />
 
         <div className="flex flex-col gap-4 font-[League_Spartan] max-w-[700px] mx-auto">

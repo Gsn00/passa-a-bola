@@ -3,6 +3,7 @@ import Container from "../../components/container";
 import Header from "../../components/header";
 import Footer from "../../components/footer";
 import SectionTitle from "../../components/sectiontitle";
+import HeaderMobile from "../../components/headermobile";
 
 export default function Peneiras() {
   return (
@@ -10,6 +11,7 @@ export default function Peneiras() {
       <Container>
         <BackgroundShapes />
         <Header />
+        <HeaderMobile />
         <SectionTitle textgray="Peneiras" textpurple="Online" />
 
         <div className="flex flex-col gap-5 max-w-[700px] mx-auto">

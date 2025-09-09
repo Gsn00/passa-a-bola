@@ -5,6 +5,7 @@ import Footer from "../../components/footer";
 import Input from "../../components/input";
 import Field from "../../components/field";
 import Button from "../../components/button";
+import HeaderMobile from "../../components/headermobile";
 
 export default function Login() {
   return (
@@ -12,8 +13,9 @@ export default function Login() {
       <Container>
         <BackgroundShapes />
         <Header />
+        <HeaderMobile />
 
-        <div className="py-10 px-10 flex flex-col gap-5 bg-[#D8D1D1] rounded-md shadow-md max-w-[500px] mx-auto">
+        <div className="p-5 lg:p-10 flex flex-col gap-5 bg-[#D8D1D1] rounded-md shadow-md max-w-[500px] mx-auto">
           <h1 className="text-center font-bold font-[League_Spartan] text-2xl text-[#690A6C]!">
             Login
           </h1>
@@ -27,10 +29,10 @@ export default function Login() {
           </Field>
 
           <div className="flex justify-between">
-            <a className="text-[#690A6C]!" href="">
+            <a className="text-[#690A6C]! max-lg:text-sm" href="">
               Esqueci minha senha
             </a>
-            <a className="text-[#690A6C]!" href="/register">
+            <a className="text-[#690A6C]! max-lg:text-sm" href="/register">
               Criar uma conta
             </a>
           </div>

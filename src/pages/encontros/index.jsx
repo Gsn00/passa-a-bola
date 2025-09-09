@@ -5,6 +5,7 @@ import Container from "../../components/container";
 import Field from "../../components/field";
 import Footer from "../../components/footer";
 import Header from "../../components/header";
+import HeaderMobile from "../../components/headermobile";
 import Input from "../../components/input";
 import Pagination from "../../components/pagination";
 import SectionTitle from "../../components/sectiontitle";
@@ -46,11 +47,11 @@ export default function Encontros() {
       <Container>
         <BackgroundShapes />
         <Header />
+        <HeaderMobile />
         <SectionTitle textgray="Encontros" textpurple="Semanais" />
 
-        <div className="grid grid-cols-3 gap-5 w-full p-5 bg-[#D8D1D1] rounded-md shadow-md mx-auto mb-15">
+        <div className="grid lg:grid-cols-3 gap-5 w-full p-5 bg-[#D8D1D1] rounded-md shadow-md mx-auto mb-15">
           <Field title="Estado">
-            {" "}
             <Select>
               <option key="todos" value="todos">
                 Todos os estados
@@ -74,7 +75,7 @@ export default function Encontros() {
           </Field>
         </div>
 
-        <div className="grid grid-cols-3 gap-5 mb-15">
+        <div className="grid lg:grid-cols-3 gap-5 mb-15">
           <CardEncontros
             title="Treino Técnico - Zona Norte (SP)"
             date="15/06/2025 — 15h00"

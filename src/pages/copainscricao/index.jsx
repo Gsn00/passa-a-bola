@@ -8,6 +8,7 @@ import Input from "../../components/input";
 import Select from "../../components/select";
 import Checkbox from "../../components/checkbox";
 import Button from "../../components/button";
+import HeaderMobile from "../../components/headermobile";
 
 export default function CopaInscricao() {
   return (
@@ -15,6 +16,7 @@ export default function CopaInscricao() {
       <Container>
         <BackgroundShapes />
         <Header />
+        <HeaderMobile />
         <SectionTitle textgray="A Copa do" textpurple="Passa a Bola" />
 
         <div className="text-center mb-15">

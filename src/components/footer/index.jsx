@@ -55,7 +55,7 @@ export default function Footer() {
             </svg>
           </a>
         </div>
-        <p className="text-sm">
+        <p className="text-xs lg:text-sm text-center">
           Copyright © 2025 Passa a Bola. Todos os direitos reservados.
         </p>
       </div>

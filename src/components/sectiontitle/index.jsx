@@ -1,6 +1,6 @@
 export default function SectionTitle({ textgray, textpurple }) {
   return (
-    <div className="size-fit mx-auto mb-10">
+    <div className="max-lg:px-5 size-fit mx-auto mb-10">
       <h1 className="text-[#696969]! text-5xl font-bold font-[League_Spartan]">
         {textgray}
       </h1>

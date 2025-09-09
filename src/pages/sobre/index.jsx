@@ -3,16 +3,18 @@ import Container from "../../components/container";
 import SectionTitle from "../../components/sectiontitle";
 import Footer from "../../components/footer";
 import BackgroundShapes from "../../components/backgroundshapes";
+import HeaderMobile from "../../components/headermobile";
 
 export default function Sobre() {
   return (
     <section>
       <BackgroundShapes />
       <Header />
+      <HeaderMobile />
       <Container>
         <SectionTitle textgray="Sobre o" textpurple="Passa a Bola" />
 
-        <div className="px-20 flex flex-col gap-10">
+        <div className="px-5 lg:px-20 flex flex-col gap-10">
           <p className="font-bold text-[#323232]! text-lg text-justify tracking-wide font-[Sora]">
             O Passa a Bola nasceu com a missão de transformar o cenário do
             futebol feminino no Brasil, oferecendo visibilidade, oportunidades e
@@ -29,10 +31,22 @@ export default function Sobre() {
             das quatro linhas.
           </p>
 
-          <div className="flex justify-evenly">
-            <img src="/images/sobre-01.png" alt="" />
-            <img src="/images/sobre-02.png" alt="" />
-            <img src="/images/sobre-03.png" alt="" />
+          <div className="flex max-lg:flex-col justify-evenly">
+            <img
+              className="w-full lg:w-[32%]"
+              src="/images/sobre-01.png"
+              alt=""
+            />
+            <img
+              className="w-full lg:w-[32%]"
+              src="/images/sobre-02.png"
+              alt=""
+            />
+            <img
+              className="w-full lg:w-[32%]"
+              src="/images/sobre-03.png"
+              alt=""
+            />
           </div>
 
           <p className="font-bold text-[#323232]! text-lg text-justify tracking-wide font-[Sora]">

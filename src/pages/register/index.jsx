@@ -6,6 +6,7 @@ import Input from "../../components/input";
 import Field from "../../components/field";
 import Button from "../../components/button";
 import Checkbox from "../../components/checkbox";
+import HeaderMobile from "../../components/headermobile";
 
 export default function Register() {
   return (
@@ -13,8 +14,9 @@ export default function Register() {
       <Container>
         <BackgroundShapes />
         <Header />
+        <HeaderMobile />
 
-        <div className="py-10 px-10 flex flex-col gap-5 bg-[#D8D1D1] rounded-md shadow-md max-w-[600px] mx-auto">
+        <div className="p-5 lg:p-10 flex flex-col gap-5 bg-[#D8D1D1] rounded-md shadow-md max-w-[600px] mx-auto">
           <h1 className="text-center font-bold font-[League_Spartan] text-2xl text-[#690A6C]!">
             Cadastro
           </h1>

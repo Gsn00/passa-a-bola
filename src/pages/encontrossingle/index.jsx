@@ -5,6 +5,7 @@ import Container from "../../components/container";
 import Field from "../../components/field";
 import Footer from "../../components/footer";
 import Header from "../../components/header";
+import HeaderMobile from "../../components/headermobile";
 import Input from "../../components/input";
 import SectionTitle from "../../components/sectiontitle";
 import Select from "../../components/select";
@@ -15,6 +16,7 @@ export default function EncontrosSingle() {
       <Container>
         <BackgroundShapes />
         <Header />
+        <HeaderMobile />
         <SectionTitle textgray="Encontros" textpurple="Semanais" />
 
         <CardEncontros
