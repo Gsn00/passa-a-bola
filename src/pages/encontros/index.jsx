@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import BackgroundShapes from "../../components/backgroundshapes";
 import BulletPoint from "../../components/bulletpoint";
 import CardEncontros from "../../components/cardencontros";
@@ -12,6 +13,20 @@ import SectionTitle from "../../components/sectiontitle";
 import Select from "../../components/select";
 
 export default function Encontros() {
+  const [encontros, setEncontros] = useState([]);
+
+  //Script de seed
+  useEffect(() => {
+    const fetchTasks = async () => {
+      fetch("seed.json")
+        .then((res) => res.json())
+        .then((data) => {
+          setEncontros(data);
+        });
+    };
+    fetchTasks();
+  }, []);
+
   const estados = [
     { sigla: "AC", nome: "Acre" },
     { sigla: "AL", nome: "Alagoas" },
@@ -76,65 +91,18 @@ export default function Encontros() {
         </div>
 
         <div className="grid lg:grid-cols-3 gap-5 mb-15">
-          <CardEncontros
-            title="Treino Técnico - Zona Norte (SP)"
-            date="15/06/2025 — 15h00"
-            location="Arena Bela Vista, Rua Major Diogo, 350 — Bela Vista, SP"
-            type="Recreativo"
-            vacancies="6"
-            text="Vem bater bola com a gente em um ambiente leve, divertido e seguro! Nível livre, só chegar."
-            href="/encontros/encontro01"
-          />
-
-          <CardEncontros
-            title="Amistoso — Belo Horizonte (MG)"
-            date="22/06/2025 — 16h30"
-            location="Campo Santa Tereza, Rua Hermilo Alves, 75 — Santa Tereza, Belo Horizonte, MG"
-            type="Competitivo"
-            vacancies="10"
-            text="Partida amistosa para reunir as meninas de BH! Clima de jogo sério, mas sempre com diversão e respeito."
-            href="/encontros/encontro01"
-          />
-
-          <CardEncontros
-            title="Treino de Finalização — Curitiba (PR)"
-            date="29/06/2025 — 14h00"
-            location="Centro Esportivo Cajuru, Rua da Cidadania, 800 — Cajuru, Curitiba, PR"
-            type="Treino Técnico"
-            vacancies="8"
-            text="Sessão especial para treinar chutes, finalizações e posicionamento ofensivo. Todas são bem-vindas!"
-            href="/encontros/encontro01"
-          />
-
-          <CardEncontros
-            title="Futebol de Areia — Fortaleza (CE)"
-            date="06/07/2025 — 09h30"
-            location="Praia do Futuro, Av. Zezé Diogo, 5000 — Fortaleza, CE"
-            type="Recreativo"
-            vacancies="12"
-            text="Bora jogar na areia da Praia do Futuro? Encontro descontraído, perfeito para quem curte sol, mar e futebol!"
-            href="/encontros/encontro01"
-          />
-
-          <CardEncontros
-            title="Treino Coletivo — Porto Alegre (RS)"
-            date="13/07/2025 — 18h00"
-            location="Parque Marinha do Brasil, Av. Borges de Medeiros, 2035 — Porto Alegre, RS"
-            type="Treino Coletivo"
-            vacancies="15"
-            text="Treino focado em entrosamento, jogadas rápidas e coletivas. Excelente para quem quer melhorar o trabalho em equipe."
-            href="/encontros/encontro01"
-          />
-
-          <CardEncontros
-            title="Jogo das Estrelas Passa a Bola — Salvador (BA)"
-            date="20/07/2025 — 17h00"
-            location="Arena Pituaçu, Av. Paralela, s/n — Salvador, BA"
-            type="Especial"
-            vacancies="20"
-            text="Evento especial para celebrar o futebol feminino em Salvador! Venha participar e mostrar sua paixão pelo esporte."
-            href="/encontros/encontro01"
-          />
+          {encontros.map((e) => (
+            <CardEncontros
+              key={e.title}
+              title={e.title}
+              date={e.date}
+              location={e.location}
+              type={e.type}
+              vacancies={e.vacancies}
+              text={e.text}
+              href={e.href}
+            />
+          ))}
         </div>
 
         <Pagination>

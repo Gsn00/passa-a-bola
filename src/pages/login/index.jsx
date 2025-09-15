@@ -6,8 +6,66 @@ import Input from "../../components/input";
 import Field from "../../components/field";
 import Button from "../../components/button";
 import HeaderMobile from "../../components/headermobile";
+import { useEffect, useState } from "react";
 
 export default function Login() {
+  const [usuarios, setUsuarios] = useState([]);
+  const [login, setLogin] = useState("");
+  const [password, setPassword] = useState("");
+
+  //Consumo de API
+  useEffect(() => {
+    const fetchTasks = async () => {
+      fetch("usuarios.json")
+        .then((res) => res.json())
+        .then((data) => {
+          setUsuarios(data);
+        });
+    };
+    fetchTasks();
+  }, []);
+
+
+  //Tratamento de erros
+  function validarCampos(email, password) {
+    if (email.trim() == "" || password.trim() == "") {
+      return false;
+    }
+    return true;
+  }
+
+  //Teste unitário
+  function emailValido(email) {
+    if (email.includes("@") && email.includes(".")) {
+      return true;
+    }
+    return false;
+  }
+
+  //Autenticação
+  function efetuarLogin(login, password) {
+    if (!validarCampos(login, password)) {
+      alert("Preencha os campos vazios.");
+      return;
+    }
+
+    if (!emailValido(login)) {
+      alert("Digite um e-mail válido");
+      return;
+    }
+
+    let usuarioEncontrado = false;
+    usuarios.map((usuario) => {
+      if (usuario.login == login && usuario.password == password) {
+        usuarioEncontrado = true;
+        alert("Logado com sucesso!");
+        return;
+      }
+    });
+    if (!usuarioEncontrado) {
+      alert("Usuário não encontrado");
+    }
+  }
   return (
     <section>
       <Container>
@@ -21,11 +79,19 @@ export default function Login() {
           </h1>
 
           <Field title="E-mail">
-            <Input type="email" placeholder="Digite seu e-mail..." />
+            <Input
+              onChange={(event) => setLogin(event.target.value)}
+              type="email"
+              placeholder="Digite seu e-mail..."
+            />
           </Field>
 
           <Field title="Senha">
-            <Input type="password" placeholder="Digite sua senha..." />
+            <Input
+              onChange={(event) => setPassword(event.target.value)}
+              type="password"
+              placeholder="Digite sua senha..."
+            />
           </Field>
 
           <div className="flex justify-between">
@@ -38,7 +104,13 @@ export default function Login() {
           </div>
 
           <div className="text-center">
-            <Button>Entrar</Button>
+            <Button
+              onClick={() => {
+                efetuarLogin(login, password);
+              }}
+            >
+              Entrar
+            </Button>
           </div>
         </div>
 

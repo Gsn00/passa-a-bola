@@ -1,0 +1,31 @@
+[
+  {
+    "id": 1,
+    "login": "artur123@gmail.com",
+    "password": "art13#2"
+  },
+
+  {
+    "id": 2,
+    "login": "gabriel634@gmail.com",
+    "password": "gab4!563"
+  },
+
+  {
+    "id": 3,
+    "login": "lucas213@gmail.com",
+    "password": "luc321"
+  },
+
+  {
+    "id": 4,
+    "login": "marcielle436@gmail.com",
+    "password": "marci.32g"
+  },
+
+  {
+    "id": 5,
+    "login": "marcos4982@gmail.com",
+    "password": "mar@608"
+  }
+]
