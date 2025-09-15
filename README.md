@@ -12,23 +12,23 @@ https://passa-a-bola-indol.vercel.app/
 # WebDev
 
 ## Autenticação 
-Função efetuarLogin na página login. 
+- Função efetuarLogin na página login. 
 
 ## Roteamento
-Navegação entre páginas usando o react router.
+- Navegação entre páginas usando o react router.
 
 ## Consumo de API
-Consumo do arquivo usuarios.json na página login.
+- Consumo do arquivo usuarios.json na página login.
 
 ## Tratamento de erro
-Validação de campos obrigatórios na página login.
+- Validação de campos obrigatórios na página login.
 
 ## Testes unitários 
-Validação de email na página login
+- Validação de email na página login
 
 ## Script de seed
-Consumo do arquivo seed.json na página encontros
+- Consumo do arquivo seed.json na página encontros
 
 ## Documentação de endpoints
-usuarios.json 
-seed.json
+- usuarios.json 
+- seed.json
