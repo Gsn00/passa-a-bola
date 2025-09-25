@@ -1,106 +1,147 @@
-import SectionTitle from "../sectiontitle";
+import CardChaveamento from "../cardchaveamento";
 
 export default function ScheduleCopa() {
-  const events = [
-    {
-      id: 1,
-      date: "04/10/2025",
-      time: "15:00",
-      cityState: "São Paulo (SP)",
-      venue: "Arena Bela Vista — Rua Major Diogo, 350",
-      match: "Passa a Bola SP x Fortaleza FC",
-      stage: "Fase de Grupos",
-    },
-    {
-      id: 2,
-      date: "05/10/2025",
-      time: "16:30",
-      cityState: "Belo Horizonte (MG)",
-      venue: "Campo Santa Tereza — Rua Hermilo Alves, 75",
-      match: "BH United x Salvador FC",
-      stage: "Fase de Grupos",
-    },
-    {
-      id: 3,
-      date: "06/10/2025",
-      time: "09:30",
-      cityState: "Fortaleza (CE)",
-      venue: "Praia do Futuro — Av. Zezé Diogo",
-      match: "Fortaleza FC x Time Litoral",
-      stage: "Fase de Grupos",
-    },
-    {
-      id: 4,
-      date: "11/10/2025",
-      time: "18:00",
-      cityState: "Curitiba (PR)",
-      venue: "Centro Esportivo Cajuru — Rua da Cidadania, 800",
-      match: "Curitiba Ladies x Passa a Bola SP",
-      stage: "Fase de Grupos",
-    },
-    {
-      id: 5,
-      date: "18/10/2025",
-      time: "14:00",
-      cityState: "Porto Alegre (RS)",
-      venue: "Parque Marinha do Brasil — Av. Borges de Medeiros, 2035",
-      match: "Porto Alegre FC x Time Sul",
-      stage: "Quartas de Final",
-    },
-    {
-      id: 6,
-      date: "19/10/2025",
-      time: "16:00",
-      cityState: "Salvador (BA)",
-      venue: "Arena Pituaçu — Av. Paralela",
-      match: "Salvador FC x BH United",
-      stage: "Quartas de Final",
-    },
-    {
-      id: 7,
-      date: "25/10/2025",
-      time: "17:00",
-      cityState: "Brasília (DF)",
-      venue: "Estádio Nacional (campo auxiliar)",
-      match: "Semifinal A",
-      stage: "Semifinais",
-    },
-    {
-      id: 8,
-      date: "01/11/2025",
-      time: "19:00",
-      cityState: "Rio de Janeiro (RJ)",
-      venue: "Estádio (final) — local a confirmar",
-      match: "Final — Campeão vs Vice",
-      stage: "Final",
-    },
-  ];
-
   return (
     <section className="py-12 px-4 md:px-8">
-      <SectionTitle textgray="Cronograma" textpurple="da Copa" />
-      <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {events.map((e) => (
-          <article
-            key={e.id}
-            className="bg-white backdrop-blur-sm p-4 rounded-md shadow-md"
-          >
-            <div className="flex items-center justify-between mb-2">
-              <span className="text-sm font-semibold">{e.stage}</span>
-              <span className="text-xs">
-                {e.date} • {e.time}
-              </span>
-            </div>
-            <h3 className="font-bold text-lg mb-1">{e.match}</h3>
-            <p className="text-sm text-gray-200">{e.venue}</p>
-            <p className="text-xs mt-2 text-gray-300">{e.cityState}</p>
-          </article>
-        ))}
+      <div className="grid grid-cols-4 gap-10">
+        <div className="flex flex-col gap-3">
+          <h2 className="font-bold text-3xl text-[#854d97]! mx-auto mb-5">
+            Oitavas de Final
+          </h2>
+
+          <CardChaveamento
+            date="10/06/2025 - 16h00"
+            first="Flamengo"
+            firstgoals={3}
+            second="Palmeiras"
+            secondgoals={1}
+          />
+          <CardChaveamento
+            date="10/06/2025 - 19h00"
+            first="Santos"
+            firstgoals={0}
+            second="Corinthians"
+            secondgoals={2}
+          />
+          <CardChaveamento
+            date="11/06/2025 - 16h00"
+            first="Grêmio"
+            firstgoals={2}
+            second="Internacional"
+            secondgoals={1}
+          />
+          <CardChaveamento
+            date="11/06/2025 - 19h00"
+            first="Athletico-PR"
+            firstgoals={1}
+            second="Fluminense"
+            secondgoals={3}
+          />
+          <CardChaveamento
+            date="12/06/2025 - 16h00"
+            first="São Paulo"
+            firstgoals={2}
+            second="Vasco"
+            secondgoals={0}
+          />
+          <CardChaveamento
+            date="12/06/2025 - 19h00"
+            first="Cruzeiro"
+            firstgoals={2}
+            second="Botafogo"
+            secondgoals={1}
+          />
+          <CardChaveamento
+            date="13/06/2025 - 16h00"
+            first="Atlético-MG"
+            firstgoals={3}
+            second="Bahia"
+            secondgoals={0}
+          />
+          <CardChaveamento
+            date="13/06/2025 - 19h00"
+            first="Fortaleza"
+            firstgoals={1}
+            second="Ceará"
+            secondgoals={2}
+          />
+        </div>
+
+        <div className="flex flex-col gap-3">
+          <h2 className="font-bold text-3xl text-[#854d97]! mx-auto mb-5">
+            Quartas de Final
+          </h2>
+          <CardChaveamento
+            date="14/06/2025 - 16h00"
+            first="Flamengo"
+            firstgoals={2}
+            second="Corinthians"
+            secondgoals={1}
+            quartas={true}
+          />
+          <CardChaveamento
+            date="14/06/2025 - 19h00"
+            first="Grêmio"
+            firstgoals={0}
+            second="Fluminense"
+            secondgoals={1}
+            quartas={true}
+          />
+          <CardChaveamento
+            date="15/06/2025 - 16h00"
+            first="São Paulo"
+            firstgoals={3}
+            second="Cruzeiro"
+            secondgoals={2}
+            quartas={true}
+          />
+          <CardChaveamento
+            date="15/06/2025 - 19h00"
+            first="Atlético-MG"
+            firstgoals={3}
+            second="Ceará"
+            secondgoals={0}
+            quartas={true}
+          />
+        </div>
+
+        <div className="flex flex-col gap-3">
+          <h2 className="font-bold text-3xl text-[#854d97]! mx-auto mb-5">
+            Semifinais
+          </h2>
+
+          <CardChaveamento
+            date="16/06/2025 - 16h00"
+            first="Flamengo"
+            firstgoals={1}
+            second="Fluminense"
+            secondgoals={2}
+            semi={true}
+          />
+          <CardChaveamento
+            date="16/06/2025 - 19h00"
+            first="São Paulo"
+            firstgoals={2}
+            second="Atlético-MG"
+            secondgoals={0}
+            semi={true}
+          />
+        </div>
+
+        <div className="flex flex-col gap-3">
+          <h2 className="font-bold text-3xl text-[#854d97]! mx-auto mb-5">
+            Final
+          </h2>
+          <CardChaveamento
+            date="17/06/2025 - 16h00"
+            first="Fluminense"
+            firstgoals={1}
+            second="São Paulo"
+            secondgoals={2}
+            final={true}
+          />
+        </div>
       </div>
-      <p className="mt-4 text-sm text-gray-300">
-        Cronograma sujeito a alterações — confirme horários e locais antes do
-        jogo.
-      </p>
     </section>
   );
 }
