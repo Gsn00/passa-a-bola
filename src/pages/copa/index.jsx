@@ -36,7 +36,7 @@ export default function Copa() {
 
         <div className="flex flex-col lg:flex-row px-10 lg:px-30 mb-5 gap-10">
           <div className="relative w-full lg:w-[50%] border-5 border-[#f7edf7] bg-[#f7edf7]/55 rounded-4xl">
-            <p className="text-justify w-full text-xl tracking-wide font-[League_Spartan] bg-[#fbf7fb] p-8 rounded-4xl shadow-lg relative top-4 left-3">
+            <p className="text-justify w-full sm:text-xl tracking-wide font-[League_Spartan] bg-[#fbf7fb] p-8 rounded-4xl shadow-lg relative top-4 left-3">
               A Copa Passa a Bola é o principal torneio organizado pela
               comunidade Passa a Bola, pensado para fortalecer o futebol
               feminino em todas as suas formas — do recreativo ao competitivo.
@@ -46,8 +46,8 @@ export default function Copa() {
             </p>
           </div>
 
-          <div className="relative w-full lg:w-[50%] border-5 border-[#fbf7fb] bg-[#fbf7fb]/55 rounded-4xl top-[85px]">
-            <p className="text-justify text-xl w-full tracking-wide font-[League_Spartan] bg-[#f7edf7] p-8 rounded-4xl shadow-lg relative top-4 right-3">
+          <div className="relative w-full lg:w-[50%] border-5 border-[#fbf7fb] bg-[#fbf7fb]/55 rounded-4xl sm:top-[85px]">
+            <p className="text-justify sm:text-xl w-full tracking-wide font-[League_Spartan] bg-[#f7edf7] p-8 rounded-4xl shadow-lg relative top-4 right-3">
               Nossa missão é criar um ambiente seguro, inclusivo e de alto
               astral, onde jogadoras possam desenvolver habilidades, conhecer
               outras atletas e ganhar visibilidade. O evento prioriza fair play,
@@ -57,7 +57,7 @@ export default function Copa() {
           </div>
         </div>
 
-        <div className="text-center mt-40 mb-15">
+        <div className="text-center mt-15 sm:mt-40 mb-15">
           <a
             href="/copa/inscricao"
             className="

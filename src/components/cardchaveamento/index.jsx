@@ -9,15 +9,15 @@ export default function CardChaveamento(props) {
   return (
     <div
       className={`flex flex-col gap-2 bg-white rounded-xl pt-3 pb-5 px-3 shadow-lg relative ${
-        props.quartas ? "my-[66px]" : ""
-      } ${props.semi ? "my-[197px]" : ""} ${
+        props.quartas ? "sm:my-[66px]" : ""
+      } ${props.semi ? "sm:my-[197px]" : ""} ${
         props.final
           ? "my-auto bg-[linear-gradient(141deg,rgba(235,227,225,1)_0%,rgba(226,212,221,1)_75%,rgba(217,198,218,1)_100%)]! border-1 border-[#a1769c]"
           : ""
       }`}
     >
       <div
-        className={`absolute w-[15px] h-[1px] bg-[#bd9ac9] top-1/2 right-[-15px] ${
+        className={`hidden sm:flex absolute w-[15px] h-[1px] bg-[#bd9ac9] top-1/2 right-[-15px] ${
           props.final ? "hidden" : ""
         }`}
       >

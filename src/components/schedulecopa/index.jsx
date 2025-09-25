@@ -3,7 +3,7 @@ import CardChaveamento from "../cardchaveamento";
 export default function ScheduleCopa() {
   return (
     <section className="py-12 px-4 md:px-8">
-      <div className="grid grid-cols-4 gap-10">
+      <div className="flex flex-col sm:grid sm:grid-cols-4 gap-10">
         <div className="flex flex-col gap-3">
           <h2 className="font-bold text-3xl text-[#854d97]! mx-auto mb-5">
             Oitavas de Final
