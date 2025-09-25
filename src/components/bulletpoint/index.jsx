@@ -1,9 +1,9 @@
 export default function BulletPoint({ selected, children }) {
   return (
     <span
-      className={`rounded-[50%] cursor-pointer border border-[#9D10A2] flex items-center justify-center text-sm ${
+      className={`rounded-[50%] cursor-pointer border border-[#9D10A2] flex items-center justify-center text-sm transition-transform duration-300 hover:scale-105 hover:shadow-xl ${
         selected == true ? "bg-[#9D10A2] text-white!" : "bg-transparent"
-      } ${children != undefined ? "min-w-5 min-h-5" : "min-w-4 min-h-4"}`}
+      } ${children != undefined ? "min-w-6 min-h-6" : "min-w-5 min-h-5"}`}
     >
       {children}
     </span>

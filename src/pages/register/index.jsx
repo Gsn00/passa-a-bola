@@ -16,7 +16,7 @@ export default function Register() {
         <Header />
         <HeaderMobile />
 
-        <div className="p-5 lg:p-10 flex flex-col gap-5 bg-[#D8D1D1] rounded-md shadow-md max-w-[600px] mx-auto">
+        <div className="p-5 lg:p-10 flex flex-col gap-5 bg-[#D8D1D1] rounded-lg shadow-md max-w-[600px] mx-auto">
           <h1 className="text-center font-bold font-[League_Spartan] text-2xl text-[#690A6C]!">
             Cadastro
           </h1>

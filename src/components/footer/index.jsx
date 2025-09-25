@@ -1,13 +1,17 @@
 export default function Footer() {
   return (
     <footer className="py-10 mt-5">
-      <div className="bg-[#D8D1D1] flex flex-col gap-2 items-center py-5 rounded-md shadow-lg">
+      <div className="bg-[#D8D1D1] flex flex-col gap-2 items-center py-5 rounded-lg shadow-lg">
         <div className="flex gap-10">
-          <a href="https://www.facebook.com/oficialpassaabola/" target="_blank">
+          <a
+            className="p-2 rounded-full bg-[#c1bcbc] transition-all duration-300 hover:bg-[#a7a3a3] hover:scale-110"
+            href="https://www.facebook.com/oficialpassaabola/"
+            target="_blank"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
+              width="22"
+              height="22"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
@@ -19,11 +23,15 @@ export default function Footer() {
               <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
             </svg>
           </a>
-          <a href="https://www.instagram.com/passaabola/" target="_blank">
+          <a
+            className="p-2 rounded-full bg-[#c1bcbc] transition-all duration-300 hover:bg-[#a7a3a3] hover:scale-110"
+            href="https://www.instagram.com/passaabola/"
+            target="_blank"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
+              width="22"
+              height="22"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
@@ -37,11 +45,15 @@ export default function Footer() {
               <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
             </svg>
           </a>
-          <a href="https://www.youtube.com/@passabola" target="_blank">
+          <a
+            className="p-2 rounded-full bg-[#c1bcbc] transition-all duration-300 hover:bg-[#a7a3a3] hover:scale-110"
+            href="https://www.youtube.com/@passabola"
+            target="_blank"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
+              width="22"
+              height="22"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
@@ -59,9 +71,6 @@ export default function Footer() {
         <p className="text-xs lg:text-sm text-center">
           Desenvolvido por{" "}
           <span className="font-semibold">Nexa IT Solutions</span>
-        </p>
-        <p className="text-xs lg:text-sm text-center italic">
-          Vamos fazer a diferença no mundo?
         </p>
 
         <p className="text-xs lg:text-sm text-center border-t border-[#ada7a7] w-full pt-2">

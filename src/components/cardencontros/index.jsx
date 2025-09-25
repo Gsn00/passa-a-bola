@@ -3,9 +3,9 @@ import InfoBox from "./InfoBox";
 export default function CardEncontros(props) {
   return (
     <div
-      className={`bg-white rounded-md shadow-md p-5 flex flex-col ${props.className}`}
+      className={`bg-white rounded-lg shadow-md p-5 flex flex-col transition-transform duration-300 hover:scale-105 hover:shadow-xl ${props.className}`}
     >
-      <h3 className="font-bold mb-3">{props.title}</h3>
+      <h3 className="font-bold mb-3 mx-auto">{props.title}</h3>
 
       <InfoBox title="Data:" content={props.date} />
       <InfoBox title="Local:" content={props.location} />

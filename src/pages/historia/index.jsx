@@ -19,7 +19,7 @@ export default function Historia() {
         <HeaderMobile />
         <SectionTitle textgray="História do" textpurple="Futebol Feminino" />
 
-        <div className="max-w-xl w-full p-5 flex gap-5 bg-[#D8D1D1] rounded-md shadow-md mx-auto mb-15">
+        <div className="max-w-xl w-full p-5 flex gap-5 bg-[#D8D1D1] rounded-lg shadow-md mx-auto mb-15">
           <Input type="text" placeholder="Pesquise aqui..." className="" />
           <button className="bg-white w-[40px] h-[40px] flex items-center justify-center cursor-pointer rounded-md shadow-md">
             <Search />
