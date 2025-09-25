@@ -14,8 +14,8 @@ export default function Sobre() {
       <Container>
         <SectionTitle textgray="Sobre o" textpurple="Passa a Bola" />
 
-        <div className="px-5 lg:px-20 flex flex-col gap-10">
-          <p className="font-bold text-[#323232]! text-lg text-justify tracking-wide font-[Sora]">
+        <div className="px-5 lg:px-20 flex flex-col gap-10 bg-[#690a6c]/10 p-10 rounded-xl shadow-lg">
+          <p className="font-normal text-[#323232]! text-lg text-justify tracking-wide font-[Sora]">
             O Passa a Bola nasceu com a missão de transformar o cenário do
             futebol feminino no Brasil, oferecendo visibilidade, oportunidades e
             apoio a mulheres que vivem a paixão pelo esporte. Mais do que um
@@ -49,7 +49,7 @@ export default function Sobre() {
             />
           </div>
 
-          <p className="font-bold text-[#323232]! text-lg text-justify tracking-wide font-[Sora]">
+          <p className="font-normal text-[#323232]! text-lg text-justify tracking-wide font-[Sora]">
             Por meio de conteúdo digital, encontros presenciais, peneiras e
             parcerias, buscamos ampliar o acesso das mulheres ao futebol de
             maneira democrática e acolhedora. O Passa a Bola é também um espaço

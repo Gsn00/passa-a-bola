@@ -3,8 +3,8 @@ import CardChaveamento from "../cardchaveamento";
 export default function ScheduleCopa() {
   return (
     <section className="py-12 px-4 md:px-8">
-      <div className="flex flex-col sm:grid sm:grid-cols-4 gap-10">
-        <div className="flex flex-col gap-3">
+      <div className="flex flex-col sm:grid sm:grid-cols-4 gap-5">
+        <div className="flex flex-col gap-3 bg-[#690a6c]/10 p-3 rounded-xl shadow-lg">
           <h2 className="font-bold text-3xl text-[#854d97]! mx-auto mb-5">
             Oitavas de Final
           </h2>
@@ -67,7 +67,7 @@ export default function ScheduleCopa() {
           />
         </div>
 
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-3 bg-[#690a6c]/15 p-3 rounded-xl shadow-lg">
           <h2 className="font-bold text-3xl text-[#854d97]! mx-auto mb-5">
             Quartas de Final
           </h2>
@@ -105,7 +105,7 @@ export default function ScheduleCopa() {
           />
         </div>
 
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-3 bg-[#690a6c]/20 p-3 rounded-xl shadow-lg">
           <h2 className="font-bold text-3xl text-[#854d97]! mx-auto mb-5">
             Semifinais
           </h2>
@@ -128,8 +128,11 @@ export default function ScheduleCopa() {
           />
         </div>
 
-        <div className="flex flex-col gap-3">
-          <h2 className="font-bold text-3xl text-[#854d97]! mx-auto mb-5">
+        <div className="flex flex-col gap-3 bg-[#690a6c]/25 p-3 rounded-xl shadow-lg relative">
+          <h2 className="font-bold text-[150px] italic text-[#690a6c]/50! mx-auto mb-5 rotate-90 absolute top-[10%] left-[-20px]">
+            Final
+          </h2>
+          <h2 className="font-bold text-[150px] italic text-[#690a6c]/50! mx-auto mb-5 rotate-90 absolute bottom-[10%] left-[-20px]">
             Final
           </h2>
           <CardChaveamento

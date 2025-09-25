@@ -14,8 +14,10 @@ export default function Peneiras() {
         <HeaderMobile />
         <SectionTitle textgray="Peneiras" textpurple="Online" />
 
-        <div className="flex flex-col gap-5 max-w-[700px] mx-auto">
-          <h3 className="font-bold text-xl">Como Funciona a Peneira Online</h3>
+        <div className="flex flex-col gap-5 max-w-[700px] mx-auto bg-[#690a6c]/10 p-10 rounded-xl shadow-lg">
+          <h3 className="font-bold text-3xl mx-auto">
+            Como Funciona a Peneira Online
+          </h3>
           <p className="text-justify text-xl">
             Se você sonha em jogar futebol profissionalmente ou quer mostrar o
             seu talento, essa é a sua chance! A peneira online do Passa a Bola
@@ -23,7 +25,7 @@ export default function Peneiras() {
             independente de onde você mora.
           </p>
 
-          <h3 className="font-bold text-xl mt-5">Etapas da Peneira</h3>
+          <h3 className="font-bold text-2xl mt-5 mx-auto">Etapas da Peneira</h3>
           <ol className="list-decimal marker:font-bold flex flex-col gap-4 px-10 mx-auto text-justify">
             <li>
               <h3 className="text-xl font-[300]">Preencha o formulário</h3>
@@ -64,7 +66,9 @@ export default function Peneiras() {
             </li>
           </ol>
 
-          <h3 className="font-bold text-xl mt-5">Dicas para seu vídeo:</h3>
+          <h3 className="font-bold text-2xl mt-5 mx-auto">
+            Dicas para seu vídeo:
+          </h3>
           <ul className="list-disc flex flex-col gap-4 px-10 text-justify text-xl">
             <li>
               Mostre domínio de bola, passes, finalizações e movimentação em
@@ -84,14 +88,20 @@ export default function Peneiras() {
           </ul>
         </div>
 
-        <div className="text-center mt-10">
-          <p className="text-2xl">Inscreva-se agora!</p>
-          <a
-            href="/peneiras/inscricao"
-            className="px-5 py-2 bg-transparent rounded-md cursor-pointer border-1 border-[#690A6C] text-[#690A6C]! font-[League_Spartan] text-2xl mt-5"
-          >
-            Quero Participar
-          </a>
+        <div className="text-center">
+          <div className="text-center my-15">
+            <a
+              href="/peneiras/inscricao"
+              className="
+      inline-block px-12 py-4 text-3xl font-bold text-white!
+      rounded-2xl shadow-lg cursor-pointer font-[League_Spartan]
+      bg-[#690A6C] transition-all duration-300
+      hover:bg-[#860e8a] hover:scale-105 hover:shadow-[0_0_20px_rgba(105,10,108,0.7)]
+    "
+            >
+              Quero Participar
+            </a>
+          </div>
         </div>
 
         <Footer />

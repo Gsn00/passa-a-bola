@@ -24,14 +24,6 @@ export default function Copa() {
           />
         </div>
 
-        <div className="mb-15">
-          <Pagination>
-            <BulletPoint selected={true} />
-            <BulletPoint />
-            <BulletPoint />
-          </Pagination>
-        </div>
-
         <SectionTitle textgray="A Copa do" textpurple="Passa a Bola" />
 
         <div className="flex flex-col lg:flex-row px-10 lg:px-30 mb-5 gap-10">
