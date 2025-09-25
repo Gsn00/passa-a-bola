@@ -17,8 +17,8 @@ export default function CardChaveamento(props) {
       }`}
     >
       <div
-        className={`hidden sm:flex absolute w-[15px] h-[1px] bg-[#bd9ac9] top-1/2 right-[-15px] ${
-          props.final ? "hidden" : ""
+        className={`absolute w-[15px] h-[1px] bg-[#bd9ac9] top-1/2 right-[-15px] ${
+          props.final ? "hidden" : "hidden sm:flex"
         }`}
       >
         <ChevronRight
