@@ -42,7 +42,7 @@ export default function Copa() {
             className="relative w-full lg:w-[50%] border-5 border-[#f7edf7] bg-[#f7edf7]/55 rounded-4xl"
             initial={{ opacity: 0, y: 20 }}
             animate={leftInView ? { opacity: 1, y: 0 } : {}} // só anima quando entra
-            transition={{ duration: 0.5, delay: 0.1 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
           >
             <p className="text-justify w-full sm:text-xl tracking-wide font-[League_Spartan] bg-[#fbf7fb] p-8 rounded-4xl shadow-lg relative top-4 left-3">
               A Copa Passa a Bola é o principal torneio organizado pela
@@ -59,7 +59,7 @@ export default function Copa() {
             className="relative w-full lg:w-[50%] border-5 border-[#fbf7fb] bg-[#fbf7fb]/55 rounded-4xl sm:top-[85px]"
             initial={{ opacity: 0, y: 20 }}
             animate={rightInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.5, delay: 0.2 }}
+            transition={{ duration: 0.5, delay: 0.8 }}
           >
             <p className="text-justify sm:text-xl w-full tracking-wide font-[League_Spartan] bg-[#f7edf7] p-8 rounded-4xl shadow-lg relative top-4 right-3">
               Nossa missão é criar um ambiente seguro, inclusivo e de alto
