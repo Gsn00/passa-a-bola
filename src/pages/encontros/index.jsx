@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { motion, stagger } from "motion/react"; // Importando Motion One
 import BackgroundShapes from "../../components/backgroundshapes";
 import BulletPoint from "../../components/bulletpoint";
 import CardEncontros from "../../components/cardencontros";
@@ -15,7 +16,6 @@ import Select from "../../components/select";
 export default function Encontros() {
   const [encontros, setEncontros] = useState([]);
 
-  //Script de seed
   useEffect(() => {
     const fetchTasks = async () => {
       fetch("seed.json")
@@ -58,26 +58,34 @@ export default function Encontros() {
   ];
 
   return (
-    <section>
+    <motion.section
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+    >
       <Container>
         <BackgroundShapes />
         <Header />
         <HeaderMobile />
         <SectionTitle textgray="Encontros" textpurple="Semanais" />
 
-        <div className="grid lg:grid-cols-3 gap-5 w-full p-5 bg-[#D8D1D1] rounded-md shadow-md mx-auto mb-15">
+        <motion.div
+          className="grid lg:grid-cols-3 gap-5 w-full p-5 bg-[#D8D1D1] rounded-md shadow-md mx-auto mb-15"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
           <Field title="Estado">
             <Select>
               <option key="todos" value="todos">
                 Todos os estados
               </option>
-              {estados.map((estado) => {
-                return (
-                  <option key={estado.sigla} value={estado.sigla}>
-                    {estado.nome}
-                  </option>
-                );
-              })}
+              {estados.map((estado) => (
+                <option key={estado.sigla} value={estado.sigla}>
+                  {estado.nome}
+                </option>
+              ))}
             </Select>
           </Field>
 
@@ -88,20 +96,27 @@ export default function Encontros() {
           <Field title="Data Máxima">
             <Input type="Date" />
           </Field>
-        </div>
+        </motion.div>
 
         <div className="grid lg:grid-cols-3 gap-5 mb-15">
-          {encontros.map((e) => (
-            <CardEncontros
+          {encontros.map((e, index) => (
+            <motion.div
               key={e.title}
-              title={e.title}
-              date={e.date}
-              location={e.location}
-              type={e.type}
-              vacancies={e.vacancies}
-              text={e.text}
-              href={e.href}
-            />
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.15, duration: 0.5 }}
+              className="min-h-full flex flex-col"
+            >
+              <CardEncontros
+                title={e.title}
+                date={e.date}
+                location={e.location}
+                type={e.type}
+                vacancies={e.vacancies}
+                text={e.text}
+                href={e.href}
+              />
+            </motion.div>
           ))}
         </div>
 
@@ -115,6 +130,6 @@ export default function Encontros() {
 
         <Footer />
       </Container>
-    </section>
+    </motion.section>
   );
 }

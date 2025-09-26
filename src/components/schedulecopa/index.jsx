@@ -1,14 +1,37 @@
+import { motion, useInView } from "motion/react";
+import { useRef } from "react";
 import CardChaveamento from "../cardchaveamento";
 
 export default function ScheduleCopa() {
+  const oitavasRef = useRef(null);
+  const quartasRef = useRef(null);
+  const semiRef = useRef(null);
+  const finalRef = useRef(null);
+
+  const oitavasInView = useInView(oitavasRef, { once: true, margin: "-100px" });
+  const quartasInView = useInView(quartasRef, { once: true, margin: "-100px" });
+  const semiInView = useInView(semiRef, { once: true, margin: "-100px" });
+  const finalInView = useInView(finalRef, { once: true, margin: "-100px" });
+
+  const fadeSlide = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
+
   return (
     <section className="py-12 px-4 md:px-8 select-none">
       <div className="flex flex-col sm:grid sm:grid-cols-4 gap-5">
-        <div className="flex flex-col gap-3 bg-[#690a6c]/10 p-3 rounded-xl shadow-lg transition-transform duration-300 hover:scale-102 hover:shadow-xl">
+        <motion.div
+          ref={oitavasRef}
+          initial="hidden"
+          animate={oitavasInView ? "visible" : "hidden"}
+          variants={fadeSlide}
+          transition={{ staggerChildren: 0.1 }}
+          className="flex flex-col gap-3 bg-[#690a6c]/10 p-3 rounded-xl shadow-lg transition-transform duration-300 hover:scale-102 hover:shadow-xl"
+        >
           <h2 className="font-bold text-3xl text-[#854d97]! mx-auto mb-5">
             Oitavas de Final
           </h2>
-
           <CardChaveamento
             date="10/06/2025 - 16h00"
             first="Flamengo"
@@ -65,9 +88,16 @@ export default function ScheduleCopa() {
             second="Ceará"
             secondgoals={2}
           />
-        </div>
+        </motion.div>
 
-        <div className="flex flex-col gap-3 bg-[#690a6c]/15 p-3 rounded-xl shadow-lg transition-transform duration-300 hover:scale-102 hover:shadow-xl">
+        <motion.div
+          ref={quartasRef}
+          initial="hidden"
+          animate={quartasInView ? "visible" : "hidden"}
+          variants={fadeSlide}
+          transition={{ staggerChildren: 0.1, delay: 0.2 }}
+          className="flex flex-col gap-3 bg-[#690a6c]/15 p-3 rounded-xl shadow-lg transition-transform duration-300 hover:scale-102 hover:shadow-xl"
+        >
           <h2 className="font-bold text-3xl text-[#854d97]! mx-auto mb-5">
             Quartas de Final
           </h2>
@@ -103,13 +133,19 @@ export default function ScheduleCopa() {
             secondgoals={0}
             quartas={true}
           />
-        </div>
+        </motion.div>
 
-        <div className="flex flex-col gap-3 bg-[#690a6c]/20 p-3 rounded-xl shadow-lg transition-transform duration-300 hover:scale-102 hover:shadow-xl">
+        <motion.div
+          ref={semiRef}
+          initial="hidden"
+          animate={semiInView ? "visible" : "hidden"}
+          variants={fadeSlide}
+          transition={{ staggerChildren: 0.1, delay: 0.4 }}
+          className="flex flex-col gap-3 bg-[#690a6c]/20 p-3 rounded-xl shadow-lg transition-transform duration-300 hover:scale-102 hover:shadow-xl"
+        >
           <h2 className="font-bold text-3xl text-[#854d97]! mx-auto mb-5">
             Semifinais
           </h2>
-
           <CardChaveamento
             date="16/06/2025 - 16h00"
             first="Flamengo"
@@ -126,9 +162,16 @@ export default function ScheduleCopa() {
             secondgoals={0}
             semi={true}
           />
-        </div>
+        </motion.div>
 
-        <div className="flex flex-col gap-3 bg-[#690a6c]/25 p-3 rounded-xl shadow-lg relative transition-transform duration-300 hover:scale-102 hover:shadow-xl">
+        <motion.div
+          ref={finalRef}
+          initial="hidden"
+          animate={finalInView ? "visible" : "hidden"}
+          variants={fadeSlide}
+          transition={{ staggerChildren: 0.1, delay: 0.6 }}
+          className="flex flex-col gap-3 bg-[#690a6c]/25 p-3 rounded-xl shadow-lg relative transition-transform duration-300 hover:scale-102 hover:shadow-xl"
+        >
           <h2 className="font-bold text-3xl text-[#854d97]! mx-auto mb-5 block md:hidden">
             Final
           </h2>
@@ -146,7 +189,7 @@ export default function ScheduleCopa() {
             secondgoals={2}
             final={true}
           />
-        </div>
+        </motion.div>
       </div>
     </section>
   );

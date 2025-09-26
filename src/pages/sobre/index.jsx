@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import Header from "../../components/header";
 import Container from "../../components/container";
 import SectionTitle from "../../components/sectiontitle";
@@ -6,6 +7,22 @@ import BackgroundShapes from "../../components/backgroundshapes";
 import HeaderMobile from "../../components/headermobile";
 
 export default function Sobre() {
+  // Variantes para o efeito "stagger"
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.25, // delay entre elementos
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+  };
+
   return (
     <section>
       <BackgroundShapes />
@@ -14,8 +31,17 @@ export default function Sobre() {
       <Container>
         <SectionTitle textgray="Sobre o" textpurple="Passa a Bola" />
 
-        <div className="px-5 lg:px-20 flex flex-col gap-10 bg-[#690a6c]/10 p-10 rounded-xl shadow-lg">
-          <p className="font-normal text-[#323232]! text-lg text-justify tracking-wide font-[Sora]">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
+          className="px-5 lg:px-20 flex flex-col gap-10 bg-[#690a6c]/10 p-10 rounded-xl shadow-lg"
+        >
+          <motion.p
+            variants={itemVariants}
+            className="font-normal text-[#323232]! text-lg text-justify tracking-wide font-[Sora]"
+          >
             O Passa a Bola nasceu com a missão de transformar o cenário do
             futebol feminino no Brasil, oferecendo visibilidade, oportunidades e
             apoio a mulheres que vivem a paixão pelo esporte. Mais do que um
@@ -29,9 +55,12 @@ export default function Sobre() {
             com foco na informação, na formação e no incentivo à prática
             esportiva, sempre colocando a mulher como protagonista dentro e fora
             das quatro linhas.
-          </p>
+          </motion.p>
 
-          <div className="flex max-lg:flex-col justify-evenly">
+          <motion.div
+            variants={itemVariants}
+            className="flex max-lg:flex-col justify-evenly"
+          >
             <img
               className="w-full lg:w-[32%]"
               src="/images/sobre-01.png"
@@ -47,9 +76,12 @@ export default function Sobre() {
               src="/images/sobre-03.png"
               alt=""
             />
-          </div>
+          </motion.div>
 
-          <p className="font-normal text-[#323232]! text-lg text-justify tracking-wide font-[Sora]">
+          <motion.p
+            variants={itemVariants}
+            className="font-normal text-[#323232]! text-lg text-justify tracking-wide font-[Sora]"
+          >
             Por meio de conteúdo digital, encontros presenciais, peneiras e
             parcerias, buscamos ampliar o acesso das mulheres ao futebol de
             maneira democrática e acolhedora. O Passa a Bola é também um espaço
@@ -62,14 +94,14 @@ export default function Sobre() {
             transformador do futebol, o Passa a Bola é para você. Junte-se a nós
             nessa rede que não para de crescer e ajude a dar o próximo passo
             rumo a um futebol mais feminino, mais forte e mais livre.
-          </p>
+          </motion.p>
 
-          <div>
+          <motion.div variants={itemVariants}>
             <h1 className="font-[Montserrat] text-5xl text-transparent! [-webkit-text-stroke-color:#690A6C] [-webkit-text-stroke-width:1px] text-center">
               JOIN US
             </h1>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         <Footer />
       </Container>

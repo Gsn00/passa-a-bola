@@ -1,3 +1,4 @@
+import { motion } from "motion/react";
 import BackgroundShapes from "../../components/backgroundshapes";
 import Container from "../../components/container";
 import Field from "../../components/field";
@@ -12,6 +13,77 @@ import Checkbox from "../../components/checkbox";
 import HeaderMobile from "../../components/headermobile";
 
 export default function PeneirasSingle() {
+  const formFields = [
+    {
+      title: "Nome Completo",
+      component: (
+        <Input type="text" placeholder="Digite seu nome completo..." />
+      ),
+    },
+    {
+      title: "Data de Nascimento",
+      component: (
+        <Input type="number" placeholder="Digite sua data de nascimento..." />
+      ),
+    },
+    {
+      title: "Cidade e Estado",
+      component: (
+        <Input type="text" placeholder="Digite sua cidade e estado..." />
+      ),
+    },
+    {
+      title: "E-mail",
+      component: (
+        <Input type="email" placeholder="Digite seu e-mail para contato..." />
+      ),
+    },
+    {
+      title: "Whatsapp",
+      component: (
+        <Input type="phone" placeholder="Digite seu número do whatsapp..." />
+      ),
+    },
+    {
+      title: "Posição em Campo",
+      component: (
+        <Select>
+          <option value="" className="hidden">
+            Selecione uma opção
+          </option>
+          <option value="">Goleira</option>
+          <option value="">Defensora</option>
+          <option value="">Meio-Campista</option>
+          <option value="">Atacante</option>
+        </Select>
+      ),
+    },
+    {
+      title: "Link do vídeo (YouTube, Drive, etc.)",
+      component: (
+        <Input type="text" placeholder="Digite o link de seu vídeo..." />
+      ),
+    },
+    {
+      title: "Altura",
+      component: <Input type="text" placeholder="Digite sua altura..." />,
+    },
+    {
+      title: "Peso",
+      component: <Input type="text" placeholder="Digite seu peso..." />,
+    },
+    {
+      title: "Link do Instagram ou Rede Social Esportiva",
+      component: (
+        <Input
+          type="text"
+          placeholder="Digite o link de sua rede social esportiva..."
+        />
+      ),
+    },
+    { title: "Observações", component: <Textarea /> },
+  ];
+
   return (
     <section>
       <Container>
@@ -20,86 +92,60 @@ export default function PeneirasSingle() {
         <HeaderMobile />
         <SectionTitle textgray="Peneiras" textpurple="Online" />
 
-        <div className="flex flex-col gap-4 font-[League_Spartan] max-w-[700px] mx-auto">
-          <div className="mb-5">
+        <motion.div
+          className="flex flex-col gap-4 font-[League_Spartan] max-w-[700px] mx-auto"
+          initial="hidden"
+          animate="visible"
+          transition={{ staggerChildren: 0.1 }}
+        >
+          <motion.div
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            className="mb-5"
+          >
             <h1 className="font-bold text-2xl">Preencha o formulário</h1>
             <p className="text-xl">
               (algumas informações serão copiadas de seu perfil)
             </p>
-          </div>
+          </motion.div>
 
-          <Field title="Nome Completo">
-            <Input type="text" placeholder="Digite seu nome completo..." />
-          </Field>
+          {formFields.map((field, idx) => (
+            <motion.div
+              key={idx}
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                visible: { opacity: 1, y: 0 },
+              }}
+            >
+              <Field title={field.title}>{field.component}</Field>
+            </motion.div>
+          ))}
 
-          <Field title="Data de Nascimento">
-            <Input
-              type="number"
-              placeholder="Digite sua data de nascimento..."
-            />
-          </Field>
+          <motion.div
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0 },
+            }}
+          >
+            <Checkbox title="Aceito os termos de participação e uso do vídeo." />
+          </motion.div>
 
-          <Field title="Cidade e Estado">
-            <Input type="text" placeholder="Digite sua cidade e estado..." />
-          </Field>
-
-          <Field title="E-mail">
-            <Input
-              type="email"
-              placeholder="Digite seu e-mail para contato..."
-            />
-          </Field>
-
-          <Field title="Whatsapp">
-            <Input
-              type="phone"
-              placeholder="Digite seu número do whatsapp..."
-            />
-          </Field>
-
-          <Field title="Posição em Campo">
-            <Select>
-              <option value="" className="hidden">
-                Selecione uma opção
-              </option>
-              <option value="">Goleira</option>
-              <option value="">Defensora</option>
-              <option value="">Meio-Campista</option>
-              <option value="">Atacante</option>
-            </Select>
-          </Field>
-
-          <Field title="Link do vídeo (YouTube, Drive, etc.)">
-            <Input type="text" placeholder="Digite o link de seu vídeo..." />
-          </Field>
-
-          <Field title="Altura">
-            <Input type="text" placeholder="Digite sua altura..." />
-          </Field>
-
-          <Field title="Peso">
-            <Input type="text" placeholder="Digite seu peso..." />
-          </Field>
-
-          <Field title="Link do Instagram ou Rede Social Esportiva">
-            <Input
-              type="text"
-              placeholder="Digite o link de sua rede social esportiva..."
-            />
-          </Field>
-
-          <Field title="Observações">
-            <Textarea />
-          </Field>
-
-          <div>
-            <Checkbox title="Aceito os termos de participação e uso do vídeo. " />
-          </div>
-
-          <div className="text-center">
+          <motion.div
+            className="text-center"
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            whileHover={{
+              scale: 1.05,
+            }}
+            transition={{ duration: 0.3 }}
+          >
             <Button className="text-xl">Enviar para análise</Button>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         <Footer />
       </Container>

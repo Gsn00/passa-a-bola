@@ -7,6 +7,7 @@ import Field from "../../components/field";
 import Button from "../../components/button";
 import HeaderMobile from "../../components/headermobile";
 import { useEffect, useState } from "react";
+import { motion } from "motion/react";
 
 export default function Login() {
   const [usuarios, setUsuarios] = useState([]);
@@ -72,37 +73,69 @@ export default function Login() {
         <Header />
         <HeaderMobile />
 
-        <div className="p-5 lg:p-10 flex flex-col gap-5 bg-[#D8D1D1] rounded-lg shadow-md max-w-[500px] mx-auto">
-          <h1 className="text-center font-bold font-[League_Spartan] text-2xl text-[#690A6C]!">
+        <motion.div
+          initial={{ opacity: 0, y: 50, scale: 0.95 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="p-5 lg:p-10 flex flex-col gap-5 bg-[#D8D1D1] rounded-lg shadow-md max-w-[500px] mx-auto"
+        >
+          <motion.h1
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+            className="text-center font-bold font-[League_Spartan] text-2xl text-[#690A6C]!"
+          >
             Login
-          </h1>
+          </motion.h1>
 
-          <Field title="E-mail">
-            <Input
-              onChange={(event) => setLogin(event.target.value)}
-              type="email"
-              placeholder="Digite seu e-mail..."
-            />
-          </Field>
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.3, duration: 0.5 }}
+          >
+            <Field title="E-mail">
+              <Input
+                onChange={(event) => setLogin(event.target.value)}
+                type="email"
+                placeholder="Digite seu e-mail..."
+              />
+            </Field>
+          </motion.div>
 
-          <Field title="Senha">
-            <Input
-              onChange={(event) => setPassword(event.target.value)}
-              type="password"
-              placeholder="Digite sua senha..."
-            />
-          </Field>
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.4, duration: 0.5 }}
+          >
+            <Field title="Senha">
+              <Input
+                onChange={(event) => setPassword(event.target.value)}
+                type="password"
+                placeholder="Digite sua senha..."
+              />
+            </Field>
+          </motion.div>
 
-          <div className="flex justify-between">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5, duration: 0.4 }}
+            className="flex justify-between"
+          >
             <a className="text-[#690A6C]! max-lg:text-sm" href="">
               Esqueci minha senha
             </a>
             <a className="text-[#690A6C]! max-lg:text-sm" href="/register">
               Criar uma conta
             </a>
-          </div>
+          </motion.div>
 
-          <div className="text-center">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.6, duration: 0.5 }}
+            className="text-center"
+          >
             <Button
               onClick={() => {
                 efetuarLogin(login, password);
@@ -110,10 +143,17 @@ export default function Login() {
             >
               Entrar
             </Button>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
-        <Footer />
+        {/* Footer entrando de baixo */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.8, duration: 0.6 }}
+        >
+          <Footer />
+        </motion.div>
       </Container>
     </section>
   );
