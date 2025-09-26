@@ -12,9 +12,20 @@ import ActionButton from "../../components/actionbutton";
 export default function Copa() {
   const leftRef = useRef(null);
   const rightRef = useRef(null);
+  const videoLeftRef = useRef(null);
+  const videoRightRef = useRef(null);
 
   const leftInView = useInView(leftRef, { once: true, margin: "-100px" });
   const rightInView = useInView(rightRef, { once: true, margin: "-100px" });
+  const videoLeftInView = useInView(videoLeftRef, {
+    once: true,
+    margin: "-100px",
+  });
+  const videoRightInView = useInView(videoRightRef, {
+    once: true,
+    margin: "-100px",
+  });
+
   return (
     <section>
       <Container>
@@ -42,7 +53,7 @@ export default function Copa() {
             ref={leftRef}
             className="relative w-full lg:w-[50%] border-5 border-[#f7edf7] bg-[#f7edf7]/55 rounded-4xl"
             initial={{ opacity: 0, y: 20 }}
-            animate={leftInView ? { opacity: 1, y: 0 } : {}} // só anima quando entra
+            animate={leftInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.6 }}
           >
             <p className="text-justify w-full sm:text-xl tracking-wide font-[League_Spartan] bg-[#fbf7fb] p-8 rounded-4xl shadow-lg relative top-4 left-3">
@@ -59,7 +70,7 @@ export default function Copa() {
             ref={rightRef}
             className="relative w-full lg:w-[50%] border-5 border-[#fbf7fb] bg-[#fbf7fb]/55 rounded-4xl sm:top-[85px]"
             initial={{ opacity: 0, y: 20 }}
-            animate={rightInView ? { opacity: 1, y: 0 } : {}}
+            animate={videoRightInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.8 }}
           >
             <p className="text-justify sm:text-xl w-full tracking-wide font-[League_Spartan] bg-[#f7edf7] p-8 rounded-4xl shadow-lg relative top-4 right-3">
@@ -69,6 +80,42 @@ export default function Copa() {
               arbitragem qualificada, e ações educativas (oficinas, palestras e
               rodas de conversa sobre saúde e protagonismo feminino).
             </p>
+          </motion.div>
+        </div>
+
+        <div className="flex flex-col lg:flex-row px-10 lg:px-30 md:mb-60 max-md:mt-10 gap-10">
+          <motion.div
+            ref={videoRightRef}
+            className="relative w-full border-5 border-[#f7edf7] bg-[#f7edf7]/55 rounded-4xl sm:top-[85px]"
+            initial={{ opacity: 0, y: 20 }}
+            animate={videoRightInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5, delay: 1.2 }}
+          >
+            <video
+              autoPlay
+              muted
+              loop
+              className="w-full h-[500px] md:h-[700px] rounded-4xl shadow-xl object-cover relative top-4 left-3"
+            >
+              <source src="/videos/copa01.mp4" type="video/mp4" />
+            </video>
+          </motion.div>
+
+          <motion.div
+            ref={videoLeftRef}
+            className="relative w-full border-5 border-[#fbf7fb] bg-[#fbf7fb]/55 rounded-4xl sm:top-[185px]"
+            initial={{ opacity: 0, y: 20 }}
+            animate={videoLeftInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5, delay: 1.4 }}
+          >
+            <video
+              autoPlay
+              muted
+              loop
+              className="w-full h-[500px] md:h-[700px] rounded-4xl shadow-xl object-cover relative top-4 right-3"
+            >
+              <source src="/videos/copa02.mp4" type="video/mp4" />
+            </video>
           </motion.div>
         </div>
 
