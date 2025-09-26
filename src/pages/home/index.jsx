@@ -4,6 +4,7 @@ import Header from "../../components/header";
 import HeaderMobile from "../../components/headermobile";
 import Pagination from "../../components/pagination";
 import { motion } from "framer-motion";
+import ActionButton from "../../components/actionbutton";
 
 export default function Home() {
   const [animating, setAnimating] = useState(true);
@@ -52,17 +53,7 @@ export default function Home() {
             transition={{ duration: 0.6, delay: 0.6 }}
             className="text-center"
           >
-            <a
-              href="/sobre"
-              className="
-                inline-block px-12 py-4 text-3xl font-bold text-white!
-                rounded-2xl shadow-lg cursor-pointer font-[League_Spartan]
-                bg-[#690A6C] transition-all duration-300
-                hover:bg-[#860e8a] hover:scale-105 hover:shadow-[0_0_20px_rgba(105,10,108,0.7)]
-              "
-            >
-              Saiba Mais
-            </a>
+            <ActionButton href="/sobre" title="Saiba Mais" />
           </motion.div>
         </div>
         <div className="w-[90%] mx-auto lg:w-[50%] flex justify-center items-center">

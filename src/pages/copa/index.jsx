@@ -7,6 +7,7 @@ import ScheduleCopa from "../../components/schedulecopa";
 import HeaderMobile from "../../components/headermobile";
 import { motion, useInView } from "motion/react";
 import { useRef } from "react";
+import ActionButton from "../../components/actionbutton";
 
 export default function Copa() {
   const leftRef = useRef(null);
@@ -71,18 +72,8 @@ export default function Copa() {
           </motion.div>
         </div>
 
-        <div className="text-center mt-15 sm:mt-40 mb-15">
-          <a
-            href="/copa/inscricao"
-            className="
-      inline-block px-12 py-4 text-3xl font-bold text-white!
-      rounded-2xl shadow-lg cursor-pointer font-[League_Spartan]
-      bg-[#690A6C] transition-all duration-300
-      hover:bg-[#860e8a] hover:scale-105 hover:shadow-[0_0_20px_rgba(105,10,108,0.7)]
-    "
-          >
-            Inscreva-se!
-          </a>
+        <div className="text-center mt-15 sm:mt-40">
+          <ActionButton href="/copa/inscricao" title="Inscreva-se" />
         </div>
 
         <ScheduleCopa />

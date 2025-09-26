@@ -5,6 +5,7 @@ import Footer from "../../components/footer";
 import SectionTitle from "../../components/sectiontitle";
 import HeaderMobile from "../../components/headermobile";
 import { motion } from "motion/react";
+import ActionButton from "../../components/actionbutton";
 
 export default function Peneiras() {
   return (
@@ -129,17 +130,7 @@ export default function Peneiras() {
 
         <div className="text-center">
           <div className="text-center my-15">
-            <a
-              href="/peneiras/inscricao"
-              className="
-      inline-block px-12 py-4 text-3xl font-bold text-white!
-      rounded-2xl shadow-lg cursor-pointer font-[League_Spartan]
-      bg-[#690A6C] transition-all duration-300
-      hover:bg-[#860e8a] hover:scale-105 hover:shadow-[0_0_20px_rgba(105,10,108,0.7)]
-    "
-            >
-              Quero Participar
-            </a>
+            <ActionButton href="/peneiras/inscricao" title="Quero Participar" />
           </div>
         </div>
 
