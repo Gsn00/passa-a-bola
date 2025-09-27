@@ -3,16 +3,58 @@ import BulletPoint from "../../components/bulletpoint";
 import Header from "../../components/header";
 import HeaderMobile from "../../components/headermobile";
 import Pagination from "../../components/pagination";
-import { motion } from "framer-motion";
-import ActionButton from "../../components/actionbutton";
+import { motion, AnimatePresence } from "framer-motion";
+import Content01 from "./content01";
+import Content02 from "./content02";
+import Content03 from "./content03";
 
 export default function Home() {
   const [animating, setAnimating] = useState(true);
+  const [page, setPage] = useState(0);
+  const [pageTimeout, setPageTimeout] = useState(null);
+
+  const pages = [
+    <Content01 key={0} />,
+    <Content02 key={1} />,
+    <Content03 key={2} />,
+  ];
 
   useEffect(() => {
     const timer = setTimeout(() => setAnimating(false), 1000);
     return () => clearTimeout(timer);
   }, []);
+
+  const nextPage = () => {
+    const pos = pages.indexOf(pages[page]);
+    if (pos < pages.length - 1) {
+      setPage(pos + 1);
+    } else {
+      setPage(0);
+    }
+  };
+
+  const prevPage = () => {
+    const pos = pages.indexOf(pages[page]);
+    if (pos > 0) {
+      setPage(pos - 1);
+    } else {
+      setPage(pages.length - 1);
+    }
+  };
+
+  const autoChangePage = () => {
+    if (pageTimeout) {
+      clearTimeout(pageTimeout);
+    }
+    const timeout = setTimeout(() => {
+      nextPage();
+    }, 7000);
+    setPageTimeout(timeout);
+  };
+  useEffect(() => {
+    autoChangePage();
+  }, [page]);
+
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -25,61 +67,32 @@ export default function Home() {
       <Header />
       <HeaderMobile />
 
-      <div className="w-full lg:h-[70vh] flex flex-col lg:flex-row">
-        <div className="w-full lg:w-[50%] h-full flex flex-col gap-10 justify-center px-10 lg:px-30">
-          <motion.h1
-            initial={{ opacity: 0, y: -50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="font-bold font-[Montserrat] text-4xl lg:text-5xl text-[#9D10A2]! relative tracking-wide"
-          >
-            Passa a Bola
-            <div className="absolute w-[140px] lg:w-[200px] h-1.5 lg:h-1 bg-[#5C0C5F] -bottom-5"></div>
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-            className="tracking-widest font-[Poppins] text-sm lg:text-lg text-justify"
-          >
-            O Passa a Bola nasceu com um propósito claro: fortalecer a presença
-            das mulheres no futebol e abrir caminhos reais para quem sonha em ir
-            além dos treinos. Aqui, o esporte é levado a sério — e o talento
-            feminino, valorizado.
-          </motion.p>
-          <motion.div
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-            className="text-center"
-          >
-            <ActionButton href="/sobre" title="Saiba Mais" />
-          </motion.div>
-        </div>
-        <div className="w-[90%] mx-auto lg:w-[50%] flex justify-center items-center">
-          <motion.img
-            src="/images/home-img-01.png"
-            alt=""
-            whileHover={{ rotate: 3 }}
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="w-full"
-          />
-        </div>
-      </div>
+      <AnimatePresence mode="wait">
+        <motion.div
+          className="max-md:min-h-[611px]"
+          key={page}
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, y: -50 }}
+          transition={{ duration: 0.5 }}
+        >
+          {pages[page]}
+        </motion.div>
+      </AnimatePresence>
 
       <motion.footer
         initial={{ y: 100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
       >
-        <Pagination>
-          <BulletPoint selected={true} />
-          <BulletPoint />
-          <BulletPoint />
-          <BulletPoint />
-          <BulletPoint />
+        <Pagination nextPage={nextPage} prevPage={prevPage}>
+          {pages.map((_, index) => (
+            <BulletPoint
+              key={index}
+              onClick={() => setPage(index)}
+              selected={page === index}
+            />
+          ))}
         </Pagination>
       </motion.footer>
 
