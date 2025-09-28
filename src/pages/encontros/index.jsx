@@ -114,7 +114,7 @@ export default function Encontros() {
                 key={e.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.15, duration: 0.5 }}
+                transition={{ delay: index * 0.1, duration: 0.5 }}
                 viewport={{ once: true }}
                 className="min-h-full flex flex-col"
               >
@@ -146,15 +146,15 @@ export default function Encontros() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
         >
-          <h1 className="text-4xl md:text-5xl font-bold w-full text-center">
+          <h1 className="text-4xl md:text-5xl font-bold w-full text-center pb-5">
             Por que participar?
           </h1>
-
           <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             <motion.div
               initial={{ opacity: 0, y: 50, scale: 0.95 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
+              viewport={{ once: true }}
             >
               <CardBeneficio
                 title={"Conheça outras jogadoras"}
@@ -169,6 +169,7 @@ export default function Encontros() {
               initial={{ opacity: 0, y: 50, scale: 0.95 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+              viewport={{ once: true }}
             >
               <CardBeneficio
                 title={"Aprimore suas habilidades"}
@@ -183,6 +184,7 @@ export default function Encontros() {
               initial={{ opacity: 0, y: 50, scale: 0.95 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
+              viewport={{ once: true }}
             >
               <CardBeneficio
                 title={"Jogos competitivos e casuais"}
