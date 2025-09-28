@@ -31,7 +31,7 @@ export default function Select({
       <button
         type="button"
         onClick={() => setIsOpen(!isOpen)}
-        className="bg-white rounded-xl px-5 py-3 w-full min-w-full max-w-full h-[48px] text-left shadow-md flex justify-between items-center"
+        className="bg-white rounded-xl px-5 py-3 w-full min-w-0 appearance-none max-w-full h-[48px] text-left shadow-md flex justify-between items-center"
       >
         <span>{selected || placeholder}</span>
         <ChevronDown
