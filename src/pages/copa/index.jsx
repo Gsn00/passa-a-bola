@@ -98,6 +98,7 @@ export default function Copa() {
                 playsInline
                 muted
                 loop
+                preload="metadata"
                 className="w-full h-[500px] md:h-[700px] rounded-4xl shadow-xl object-cover relative top-4 left-3"
               >
                 <source src="/videos/copa01.mp4" type="video/mp4" />
@@ -178,6 +179,7 @@ export default function Copa() {
                 playsInline
                 muted
                 loop
+                preload="metadata"
                 className="w-full h-[500px] md:h-[700px] rounded-4xl shadow-xl object-cover relative top-4 right-3"
               >
                 <source src="/videos/copa02.mp4" type="video/mp4" />
