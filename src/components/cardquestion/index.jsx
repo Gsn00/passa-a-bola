@@ -12,7 +12,7 @@ export default function CardQuestion({ question, answer }) {
   return (
     <div
       onClick={() => toggleOpen()}
-      className={`flex flex-col pt-5 pb-4 px-4 rounded-2xl bg-white/50 shadow-sm cursor-pointer select-none ${
+      className={`flex flex-col py-4 px-4 rounded-2xl bg-white/50 shadow-sm cursor-pointer select-none ${
         isOpen ? "bg-white/100" : ""
       } transition-all duration-300`}
     >
