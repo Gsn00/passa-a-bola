@@ -95,7 +95,7 @@ export default function Copa() {
             >
               <video
                 autoPlay
-                playsinline
+                playsInline
                 muted
                 loop
                 className="w-full h-[500px] md:h-[700px] rounded-4xl shadow-xl object-cover relative top-4 left-3"
@@ -175,7 +175,7 @@ export default function Copa() {
             >
               <video
                 autoPlay
-                playsinline
+                playsInline
                 muted
                 loop
                 className="w-full h-[500px] md:h-[700px] rounded-4xl shadow-xl object-cover relative top-4 right-3"
