@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <footer className="py-10 mt-5">
-      <div className="bg-[#D8D1D1] flex flex-col gap-2 items-center py-5 rounded-lg shadow-lg">
+      <div className="bg-[#D8D1D1] flex flex-col gap-2 items-center py-5 rounded-xl shadow-lg">
         <div className="flex gap-10">
           <a
             className="p-2 rounded-full bg-[#c1bcbc] transition-all duration-300 hover:bg-[#a7a3a3] hover:scale-110"

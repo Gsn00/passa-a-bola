@@ -36,7 +36,7 @@ export default function Sobre() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.2 }}
-          className="px-5 lg:px-20 flex flex-col gap-10 bg-[#690a6c]/10 p-10 rounded-xl shadow-lg"
+          className="flex flex-col gap-5 py-10 border-5 border-[#690a6c]/5 bg-[#690a6c]/5 rounded-[40px] px-5 mb-20"
         >
           <motion.p
             variants={itemVariants}

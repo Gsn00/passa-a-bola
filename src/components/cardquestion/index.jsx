@@ -49,7 +49,7 @@ export default function CardQuestion({ question, answer }) {
               },
             }}
           >
-            <p className="font-light pt-3 text-[#7d7d7d]!">{answer}</p>
+            <p className="font-light pt-3 text-[#707070]!">{answer}</p>
           </motion.div>
         )}
       </AnimatePresence>

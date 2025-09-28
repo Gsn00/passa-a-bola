@@ -15,7 +15,6 @@ import {
   Timer,
   Users,
   Video,
-  Zap,
 } from "lucide-react";
 import CardBeneficio from "./cardbeneficio";
 import CardDepoimento from "./carddepoimento";
@@ -28,7 +27,7 @@ export default function Peneiras() {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.25, // delay entre cada card
+        staggerChildren: 0.25,
       },
     },
   };

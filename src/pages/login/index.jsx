@@ -77,7 +77,7 @@ export default function Login() {
           initial={{ opacity: 0, y: 50, scale: 0.95 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="p-5 lg:p-10 flex flex-col gap-5 bg-[#D8D1D1] rounded-lg shadow-md max-w-[500px] mx-auto"
+          className="p-5 lg:p-10 flex flex-col gap-5 bg-[#D8D1D1] rounded-2xl shadow-md max-w-[500px] mx-auto"
         >
           <motion.h1
             initial={{ opacity: 0, y: -20 }}
@@ -146,7 +146,6 @@ export default function Login() {
           </motion.div>
         </motion.div>
 
-        {/* Footer entrando de baixo */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}

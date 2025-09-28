@@ -17,12 +17,11 @@ export default function Register() {
         <Header />
         <HeaderMobile />
 
-        {/* Caixa de cadastro com animação */}
         <motion.div
           initial={{ opacity: 0, y: 50, scale: 0.95 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="p-5 lg:p-10 flex flex-col gap-5 bg-[#D8D1D1] rounded-lg shadow-md max-w-[600px] mx-auto"
+          className="p-5 lg:p-10 flex flex-col gap-5 bg-[#D8D1D1] rounded-2xl shadow-md max-w-[600px] mx-auto"
         >
           {/* Título */}
           <motion.h1
@@ -34,7 +33,6 @@ export default function Register() {
             Cadastro
           </motion.h1>
 
-          {/* Campos do formulário */}
           {[
             {
               title: "Nome Completo",
@@ -79,7 +77,6 @@ export default function Register() {
             </motion.div>
           ))}
 
-          {/* Link "Já tenho conta" */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -91,7 +88,6 @@ export default function Register() {
             </a>
           </motion.div>
 
-          {/* Checkbox */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -109,7 +105,6 @@ export default function Register() {
             />
           </motion.div>
 
-          {/* Botão */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -120,7 +115,6 @@ export default function Register() {
           </motion.div>
         </motion.div>
 
-        {/* Footer com fade de baixo */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
