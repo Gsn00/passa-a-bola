@@ -2,7 +2,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function Pagination(props) {
   return (
-    <div className="max-w-xl w-full p-5 flex justify-center items-center gap-2 md:gap-5 bg-[#D8D1D1] rounded-2xl shadow-md mx-auto">
+    <div className="max-w-xl w-full p-5 flex justify-center items-center gap-3 md:gap-5 bg-[#D8D1D1] rounded-2xl shadow-md mx-auto">
       <button
         onClick={props.prevPage}
         className="p-1 rounded-full bg-[#c1bcbc] transition-all duration-300 hover:bg-[#a7a3a3] hover:scale-110 cursor-pointer"

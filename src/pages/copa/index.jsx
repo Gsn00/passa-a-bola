@@ -8,6 +8,7 @@ import HeaderMobile from "../../components/headermobile";
 import { motion, useInView } from "motion/react";
 import { useRef } from "react";
 import ActionButton from "../../components/actionbutton";
+import CardQuestion from "../../components/cardquestion";
 
 export default function Copa() {
   const leftRef = useRef(null);
@@ -188,6 +189,46 @@ export default function Copa() {
         </div>
 
         <ScheduleCopa />
+
+        <div className="flex flex-col gap-5 rounded-[40px] px-5">
+          <h1 className="text-4xl md:text-5xl font-bold w-full text-center">
+            Perguntas Frequentes
+          </h1>
+
+          <div className="flex flex-col gap-5">
+            <CardQuestion
+              question={"Quem pode inscrever um time?"}
+              answer={
+                "A Copa é voltada para times e equipes femininas amadoras. Podem se inscrever times já formados ou grupos de amigas que queiram montar uma equipe. É necessário ter uma capitã ou responsável maior de idade para gerenciar a inscrição."
+              }
+            />
+
+            <CardQuestion
+              question={
+                "Qual o valor da inscrição por time e o que está incluso?"
+              }
+              answer={
+                "O valor da inscrição é uma taxa única por equipe, e ele cobre os custos com: arbitragem qualificada, hidratação (água/isotônicos), primeiros socorros no local, troféus e medalhas, e a organização geral do evento. O valor exato e os métodos de pagamento estão no Regulamento."
+              }
+            />
+
+            <CardQuestion
+              question={"Haverá premiação para os primeiros colocados?"}
+              answer={
+                "Sim! O time campeão e o vice-campeão recebem troféus e medalhas. Também pode haver prêmios individuais, como melhor jogadora, artilheira e goleira menos vazada. Os detalhes da premiação estarão no regulamento."
+              }
+            />
+
+            <CardQuestion
+              question={
+                "Qual é o processo de inscrição e as datas importantes?"
+              }
+              answer={
+                "O processo começa com a leitura completa do Regulamento Oficial (que será disponibilizado em breve). Depois, a Capitã preenche o formulário online, anexa a lista de atletas e efetua o pagamento da taxa de inscrição dentro do prazo estipulado."
+              }
+            />
+          </div>
+        </div>
         <Footer />
       </Container>
     </section>

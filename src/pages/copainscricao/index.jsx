@@ -11,6 +11,7 @@ import Input from "../../components/input";
 import Checkbox from "../../components/checkbox";
 import Button from "../../components/button";
 import HeaderMobile from "../../components/headermobile";
+import InputFile from "../../components/inputfile";
 
 export default function CopaInscricao() {
   return (
@@ -20,7 +21,6 @@ export default function CopaInscricao() {
         <Header />
         <HeaderMobile />
 
-        {/* título principal */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -29,7 +29,6 @@ export default function CopaInscricao() {
           <SectionTitle textgray="A Copa do" textpurple="Passa a Bola" />
         </motion.div>
 
-        {/* subtítulo */}
         <motion.div
           className="text-center mb-15"
           initial={{ opacity: 0, y: 20 }}
@@ -41,7 +40,6 @@ export default function CopaInscricao() {
           </h1>
         </motion.div>
 
-        {/* container dos campos */}
         <motion.div
           className="flex flex-col gap-3 max-w-[700px] mx-auto font-[League_Spartan]"
           initial="hidden"
@@ -51,12 +49,11 @@ export default function CopaInscricao() {
             show: {
               opacity: 1,
               transition: {
-                staggerChildren: 0.15, // atraso entre os elementos
+                staggerChildren: 0.15,
               },
             },
           }}
         >
-          {/* título seção */}
           <motion.h1
             className="text-center text-xl font-bold"
             variants={{
@@ -103,7 +100,17 @@ export default function CopaInscricao() {
             </Field>
           </motion.div>
 
-          {/* segunda seção */}
+          <motion.div
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              show: { opacity: 1, y: 0 },
+            }}
+          >
+            <Field title="Planilha de Jogadoras">
+              <InputFile />
+            </Field>
+          </motion.div>
+
           <motion.h1
             className="text-center text-xl font-bold mt-10"
             variants={{
@@ -153,7 +160,6 @@ export default function CopaInscricao() {
             </Field>
           </motion.div>
 
-          {/* checkboxes */}
           <motion.div
             className="flex flex-col gap-3"
             variants={{
@@ -166,7 +172,6 @@ export default function CopaInscricao() {
             <Checkbox title="Autorizo o uso da imagem da minha equipe em fotos e vídeos oficiais do evento." />
           </motion.div>
 
-          {/* botão */}
           <motion.div
             className="text-center mt-5"
             variants={{

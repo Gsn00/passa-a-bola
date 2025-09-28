@@ -254,7 +254,7 @@ export default function Encontros() {
             />
 
             <CardQuestion
-              question={"As vagas são limitadas??"}
+              question={"As vagas são limitadas?"}
               answer={
                 "Sim. Para garantir a melhor experiência para todas, cada encontro tem um número limitado de vagas. É bom se inscrever o quanto antes para não ficar de fora!"
               }
