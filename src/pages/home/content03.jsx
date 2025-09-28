@@ -4,7 +4,7 @@ import Polaroid from "../../components/polaroid";
 
 export default function Content03() {
   return (
-    <div className="w-full lg:h-[70vh] flex flex-col lg:flex-row">
+    <div className="w-fit lg:h-[70vh] flex flex-col lg:flex-row">
       <div className="w-full lg:w-[50%] h-full flex flex-col gap-10 justify-center px-10 lg:px-30">
         <motion.h1
           initial={{ opacity: 0, y: -50 }}
@@ -34,14 +34,15 @@ export default function Content03() {
           <ActionButton href="/historia" title="Explore a História" />
         </motion.div>
       </div>
-      <div className="w-[90%] mx-auto lg:w-[50%] py-10 md:py-0 flex justify-center items-center relative">
+      <div className="w-full lg:w-[50%] py-10 md:py-0 flex justify-center items-center relative">
         <motion.div
           initial={{ opacity: 0, scale: 0.5, rotate: -15 }}
           animate={{ opacity: 1, scale: 1, rotate: -3 }}
           transition={{ duration: 0.9, ease: "easeOut" }}
+          className="p-0 md:py-10"
         >
           <Polaroid
-            className="w-full md:w-[90%] px-1 pt-1 pb-6 md:px-2 md:pt-2 md:pb-12"
+            className="w-full lg:w-[90%] px-1 pt-1 pb-6 md:px-2 md:pt-2 md:pb-12"
             img="/images/historia-home02.jpg"
           />
         </motion.div>

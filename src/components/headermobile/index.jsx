@@ -19,7 +19,7 @@ export default function HeaderMobile() {
   }
 
   return (
-    <header className="h-[20vh] flex lg:hidden items-center justify-between px-8 font-[Open_Sans] pb-10">
+    <header className="h-fit flex lg:hidden items-center justify-between px-8 font-[Open_Sans] py-10">
       <div>
         <img src="/images/logo_mobile.png" alt="" />
       </div>
@@ -34,7 +34,7 @@ export default function HeaderMobile() {
         }`}
       ></div>
       <div
-        className={`w-[75vw] h-screen bg-white fixed z-30 top-0 right-0 shadow-xl flex flex-col transform transition-transform duration-300 ${
+        className={`w-[75vw] h-screen overflow-y-auto bg-white fixed z-30 top-0 right-0 shadow-xl flex flex-col transform transition-transform duration-300 ${
           opened ? "translate-x-0" : "translate-x-full"
         }`}
       >

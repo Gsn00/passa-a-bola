@@ -52,7 +52,7 @@ export default function Home() {
     setPageTimeout(timeout);
   };
   useEffect(() => {
-    autoChangePage();
+    /*autoChangePage();*/
   }, [page]);
 
   return (
@@ -60,7 +60,7 @@ export default function Home() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className={`max-lg:px-5 max-md:pb-5 relative select-none max-lg:flex max-lg:flex-col max-lg:justify-between max-lg:min-h-screen ${
+      className={`max-lg:px-5 max-md:pb-10 relative select-none max-lg:flex max-lg:flex-col max-lg:justify-between max-lg:min-h-screen ${
         animating ? "overflow-hidden" : ""
       }`}
     >

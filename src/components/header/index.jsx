@@ -1,6 +1,6 @@
 export default function Header() {
   return (
-    <header className="h-[20vh] hidden lg:flex items-center justify-center font-[Open_Sans]">
+    <header className="min-h-[20vh] hidden lg:flex items-center justify-center font-[Open_Sans]">
       <div className="flex items-center gap-10 bg-[#D8D1D1] relative w-auto py-4 px-14 rounded-xl font-bold tracking-wide ml-[60px]">
         <div className="absolute -left-18">
           <img src="/images/logo01.png" alt="" />

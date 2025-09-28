@@ -4,7 +4,7 @@ import Polaroid from "../../components/polaroid";
 
 export default function Content02() {
   return (
-    <div className="w-full lg:h-[70vh] flex flex-col lg:flex-row">
+    <div className="w-full h-fit lg:h-[70vh] flex flex-col lg:flex-row">
       <div className="w-full lg:w-[50%] h-full flex flex-col gap-10 justify-center px-10 lg:px-30">
         <motion.h1
           initial={{ opacity: 0, y: -50 }}
@@ -34,11 +34,12 @@ export default function Content02() {
           <ActionButton href="/peneiras" title="Encontre Oportunidades" />
         </motion.div>
       </div>
-      <div className="w-[100%] md:w-[90%] max-md:py-10 mx-auto lg:w-[50%] flex justify-center items-center relative">
+      <div className="w-full md:w-[90%] py-10 mx-auto lg:w-[50%] flex justify-center items-center relative">
         <motion.div
           initial={{ opacity: 0, x: -100, rotate: -10 }}
           animate={{ opacity: 1, x: 40, rotate: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
+          className="relative"
         >
           <Polaroid
             className="w-full max-w-[400px] aspect-square px-1 pt-1 pb-6 md:px-2 md:pt-2 md:pb-12"
@@ -48,9 +49,9 @@ export default function Content02() {
 
         <motion.div
           initial={{ opacity: 0, x: 100, rotate: 10 }}
-          animate={{ opacity: 1, x: 0, rotate: -5 }}
+          animate={{ opacity: 1, x: -40, rotate: -5 }}
           transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-          className="relative md:absolute -left-10 md:left-20"
+          className="relative"
         >
           <Polaroid
             className="w-full max-w-[400px] aspect-square px-1 pt-1 pb-6 md:px-2 md:pt-2 md:pb-12"

@@ -4,7 +4,7 @@ export default function Input(props) {
       {...props}
       type={props.type}
       placeholder={props.placeholder}
-      className="bg-white outline-0 border-0 rounded-xl px-5 py-3 w-full min-w-0 appearance-none h-[48px] shadow-md"
+      className="bg-white outline-0 border-0 rounded-xl px-5 py-3 w-full min-w-0 h-[48px] shadow-md"
     />
   );
 }
