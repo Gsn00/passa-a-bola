@@ -31,7 +31,7 @@ export default function Content02() {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="text-center"
         >
-          <ActionButton href="/peneiras" title="Encontre Oportunidades" />
+          <ActionButton href="/peneiras" title="Ver Oportunidades" />
         </motion.div>
       </div>
       <div className="w-full md:w-[90%] py-10 mx-auto lg:w-[50%] flex justify-center items-center relative">

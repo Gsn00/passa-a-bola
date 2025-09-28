@@ -20,7 +20,7 @@ export default function ScheduleCopa() {
 
   return (
     <section className="py-12 px-4 md:px-8 select-none">
-      <div className="flex flex-col sm:grid sm:grid-cols-4 gap-5">
+      <div className="flex flex-col md:grid md:grid-cols-4 gap-5">
         <motion.div
           ref={oitavasRef}
           initial="hidden"

@@ -52,7 +52,7 @@ export default function Home() {
     setPageTimeout(timeout);
   };
   useEffect(() => {
-    /*autoChangePage();*/
+    autoChangePage();
   }, [page]);
 
   return (
