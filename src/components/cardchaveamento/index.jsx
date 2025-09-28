@@ -9,8 +9,8 @@ export default function CardChaveamento(props) {
   return (
     <div
       className={`flex flex-col gap-2 bg-white rounded-xl pt-3 pb-5 px-3 shadow-lg relative ${
-        props.quartas ? "sm:my-[66px]" : ""
-      } ${props.semi ? "sm:my-[197px]" : ""} ${props.final ? "my-auto" : ""}`}
+        props.quartas ? "md:my-[66px]" : ""
+      } ${props.semi ? "md:my-[197px]" : ""} ${props.final ? "my-auto" : ""}`}
     >
       <div
         className={`absolute w-[15px] h-[1px] bg-[#bd9ac9] top-1/2 right-[-15px] ${

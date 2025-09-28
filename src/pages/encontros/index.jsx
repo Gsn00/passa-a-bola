@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { motion, stagger } from "motion/react"; // Importando Motion One
+import { motion } from "motion/react";
 import BackgroundShapes from "../../components/backgroundshapes";
 import BulletPoint from "../../components/bulletpoint";
 import CardEncontros from "../../components/cardencontros";
@@ -13,31 +13,12 @@ import Pagination from "../../components/pagination";
 import SectionTitle from "../../components/sectiontitle";
 import Select from "../../components/select";
 import CardQuestion from "../../components/cardquestion";
-import { Calendar, Medal, Trophy, Users, Zap } from "lucide-react";
+import { Trophy, Users, Zap } from "lucide-react";
 import CardBeneficio from "./cardbeneficio";
 import Button from "../../components/button";
 
 export default function Encontros() {
   const [encontros, setEncontros] = useState([]);
-
-  const container = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.25,
-      },
-    },
-  };
-
-  const card = {
-    hidden: { opacity: 0, y: 40 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6, ease: "easeOut" },
-    },
-  };
 
   useEffect(() => {
     const fetchTasks = async () => {
@@ -122,13 +103,19 @@ export default function Encontros() {
             </Field>
           </motion.div>
 
-          <div className="grid lg:grid-cols-3 gap-5">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            className="grid lg:grid-cols-3 gap-5"
+          >
             {encontros.map((e, index) => (
               <motion.div
                 key={e.title}
                 initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.15, duration: 0.5 }}
+                viewport={{ once: true }}
                 className="min-h-full flex flex-col"
               >
                 <CardEncontros
@@ -142,7 +129,7 @@ export default function Encontros() {
                 />
               </motion.div>
             ))}
-          </div>
+          </motion.div>
 
           <Pagination>
             <BulletPoint selected={true}>1</BulletPoint>
@@ -153,19 +140,22 @@ export default function Encontros() {
           </Pagination>
         </div>
 
-        <div className="flex flex-col gap-5 py-10 mb-20">
+        <motion.div
+          className="flex flex-col gap-5 py-10 mb-20"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+        >
           <h1 className="text-4xl md:text-5xl font-bold w-full text-center">
             Por que participar?
           </h1>
 
-          <motion.div
-            className="grid grid-cols-1 md:grid-cols-3 gap-5"
-            variants={container}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.7 }}
-          >
-            <motion.div variants={card}>
+          <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            <motion.div
+              initial={{ opacity: 0, y: 50, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
+            >
               <CardBeneficio
                 title={"Conheça outras jogadoras"}
                 description={
@@ -175,7 +165,11 @@ export default function Encontros() {
               />
             </motion.div>
 
-            <motion.div variants={card}>
+            <motion.div
+              initial={{ opacity: 0, y: 50, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+            >
               <CardBeneficio
                 title={"Aprimore suas habilidades"}
                 description={
@@ -185,7 +179,11 @@ export default function Encontros() {
               />
             </motion.div>
 
-            <motion.div variants={card}>
+            <motion.div
+              initial={{ opacity: 0, y: 50, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
+            >
               <CardBeneficio
                 title={"Jogos competitivos e casuais"}
                 description={
@@ -195,13 +193,13 @@ export default function Encontros() {
               />
             </motion.div>
           </motion.div>
-        </div>
+        </motion.div>
 
         <motion.div
           className="flex flex-col gap-5 py-10 border-5 border-[#690a6c]/5 bg-white/40 rounded-[40px] px-5 mb-20"
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.7 }}
+          viewport={{ once: true, amount: 0.3 }}
         >
           <motion.h1
             className="text-4xl md:text-5xl font-bold w-full text-center text-[#690a6c]!"
@@ -225,7 +223,10 @@ export default function Encontros() {
           </motion.p>
 
           <motion.div
-            variants={card}
+            initial={{ opacity: 0, y: 50, scale: 0.95 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
+            viewport={{ once: true }}
             className="flex flex-col w-full md:flex-row gap-5 max-w-[600px] mx-auto"
           >
             <Input placeholder="Digite seu melhor e-mail" type="email" />

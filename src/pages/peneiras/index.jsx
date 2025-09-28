@@ -22,25 +22,6 @@ import CardDica from "./carddica";
 import CardQuestion from "../../components/cardquestion";
 
 export default function Peneiras() {
-  const container = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.25,
-      },
-    },
-  };
-
-  const card = {
-    hidden: { opacity: 0, y: 40 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6, ease: "easeOut" },
-    },
-  };
-
   return (
     <motion.section
       className="font-[League_Spartan]"
@@ -87,12 +68,16 @@ export default function Peneiras() {
 
           <motion.div
             className="grid grid-cols-1 md:grid-cols-4 gap-5"
-            variants={container}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
           >
-            <motion.div variants={card}>
+            <motion.div
+              initial={{ opacity: 0, y: 50, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
+              viewport={{ once: true }}
+            >
               <CardBeneficio
                 title={"Maior visibilidade"}
                 description={
@@ -102,7 +87,12 @@ export default function Peneiras() {
               />
             </motion.div>
 
-            <motion.div variants={card}>
+            <motion.div
+              initial={{ opacity: 0, y: 50, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+              viewport={{ once: true }}
+            >
               <CardBeneficio
                 title={"Treine com profissionais"}
                 description={
@@ -112,7 +102,12 @@ export default function Peneiras() {
               />
             </motion.div>
 
-            <motion.div variants={card}>
+            <motion.div
+              initial={{ opacity: 0, y: 50, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
+              viewport={{ once: true }}
+            >
               <CardBeneficio
                 title={"Eventos presenciais"}
                 description={"Participe de jogos e treinos exclusivos."}
@@ -120,7 +115,12 @@ export default function Peneiras() {
               />
             </motion.div>
 
-            <motion.div variants={card}>
+            <motion.div
+              initial={{ opacity: 0, y: 50, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
+              viewport={{ once: true }}
+            >
               <CardBeneficio
                 title={"Vídeos avaliados"}
                 description={"Receba feedback personalizado de especialistas."}
@@ -134,7 +134,7 @@ export default function Peneiras() {
           className="flex flex-col gap-5 py-10 px-5 mb-20"
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
+          viewport={{ once: true, amount: 0.3 }}
         >
           <h1 className="text-4xl md:text-5xl font-bold w-full text-center">
             Histórias de Sucesso
@@ -145,11 +145,13 @@ export default function Peneiras() {
             jogadoras, abrindo portas para oportunidades incríveis.
           </p>
 
-          <motion.div
-            className="grid grid-cols-1 md:grid-cols-3 gap-5"
-            variants={container}
-          >
-            <motion.div variants={card}>
+          <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            <motion.div
+              initial={{ opacity: 0, y: 50, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
+              viewport={{ once: true }}
+            >
               <CardDepoimento
                 name={"Ana Silva"}
                 testimony={
@@ -159,7 +161,12 @@ export default function Peneiras() {
               />
             </motion.div>
 
-            <motion.div variants={card}>
+            <motion.div
+              initial={{ opacity: 0, y: 50, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+              viewport={{ once: true }}
+            >
               <CardDepoimento
                 name={"Beatriz Costa"}
                 testimony={
@@ -169,7 +176,12 @@ export default function Peneiras() {
               />
             </motion.div>
 
-            <motion.div variants={card}>
+            <motion.div
+              initial={{ opacity: 0, y: 50, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
+              viewport={{ once: true }}
+            >
               <CardDepoimento
                 name={"Camila Santos"}
                 testimony={
@@ -185,7 +197,7 @@ export default function Peneiras() {
           className="flex flex-col gap-5 py-10 border-5 border-[#690a6c]/5 bg-white/40 rounded-[40px] px-5 mb-20"
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
+          viewport={{ once: true, amount: 0.3 }}
         >
           <motion.h1
             className="text-4xl md:text-5xl font-bold w-full text-center text-[#690a6c]!"
@@ -212,13 +224,12 @@ export default function Peneiras() {
             className="grid grid-cols-1 md:grid-cols-4 gap-5"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.7 }}
+            viewport={{ once: true, amount: 0.3 }}
           >
             <motion.div
               initial={{ opacity: 0, y: 50, scale: 0.95 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
-              className="h-full"
               viewport={{ once: true }}
             >
               <CardDica
@@ -232,7 +243,6 @@ export default function Peneiras() {
               initial={{ opacity: 0, y: 50, scale: 0.95 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
-              className="h-full"
               viewport={{ once: true }}
             >
               <CardDica
@@ -246,7 +256,6 @@ export default function Peneiras() {
               initial={{ opacity: 0, y: 50, scale: 0.95 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
-              className="h-full"
               viewport={{ once: true }}
             >
               <CardDica
@@ -260,7 +269,6 @@ export default function Peneiras() {
               initial={{ opacity: 0, y: 50, scale: 0.95 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
-              className="h-full"
               viewport={{ once: true }}
             >
               <CardDica
