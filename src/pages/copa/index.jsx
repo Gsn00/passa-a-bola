@@ -44,7 +44,7 @@ export default function Copa() {
         >
           <div className="flex flex-col gap-5 p-2 border-5 border-[#690a6c]/20 rounded-[40px] mb-20 opacity-80 select-none pointer-events-none">
             <img
-              className="w-full object-cover max-lg:h-[50vh] rounded-[30px]"
+              className="w-full h-[75vh] object-top object-cover max-lg:h-[50vh] rounded-[30px]"
               src="/images/copa_banner.jpg"
               alt=""
             />
