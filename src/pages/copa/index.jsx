@@ -42,7 +42,7 @@ export default function Copa() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <div className="flex flex-col gap-5 p-2 border-5 border-[#690a6c]/20 rounded-[40px] mb-20">
+          <div className="flex flex-col gap-5 p-2 border-5 border-[#690a6c]/20 rounded-[40px] mb-20 opacity-80 select-none pointer-events-none">
             <img
               className="w-full object-cover max-lg:h-[50vh] rounded-[30px]"
               src="/images/copa_banner.jpg"
@@ -54,7 +54,7 @@ export default function Copa() {
         <SectionTitle textgray="A Copa do" textpurple="Passa a Bola" />
 
         <div className="flex flex-col gap-5 py-10 border-5 border-[#690a6c]/5 bg-white/40 rounded-[40px] px-5 mb-20">
-          <h1 className="text-4xl md:text-5xl font-bold text-[#690a6c]! w-full text-center pb-5">
+          <h1 className="text-4xl md:text-5xl font-bold text-[#690a6c]! w-full text-center pb-10">
             Muito mais que um torneio
           </h1>
           <motion.div
