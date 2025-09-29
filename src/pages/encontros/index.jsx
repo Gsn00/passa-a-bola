@@ -133,10 +133,6 @@ export default function Encontros() {
 
           <Pagination>
             <BulletPoint selected={true}>1</BulletPoint>
-            <BulletPoint>2</BulletPoint>
-            <BulletPoint>3</BulletPoint>
-            <BulletPoint>4</BulletPoint>
-            <BulletPoint>5</BulletPoint>
           </Pagination>
         </div>
 

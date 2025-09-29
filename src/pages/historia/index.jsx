@@ -120,9 +120,6 @@ export default function Historia() {
           >
             <Pagination>
               <BulletPoint selected={true}>1</BulletPoint>
-              <BulletPoint>2</BulletPoint>
-              <BulletPoint>3</BulletPoint>
-              <BulletPoint>4</BulletPoint>
             </Pagination>
           </motion.div>
         </div>
