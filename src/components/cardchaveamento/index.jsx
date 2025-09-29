@@ -9,12 +9,12 @@ export default function CardChaveamento(props) {
   return (
     <div
       className={`flex flex-col gap-2 bg-white rounded-xl pt-3 pb-5 px-3 shadow-lg relative ${
-        props.quartas ? "md:my-[66px]" : ""
-      } ${props.semi ? "md:my-[197px]" : ""} ${props.final ? "my-auto" : ""}`}
+        props.quartas ? "lg:my-[66px]" : ""
+      } ${props.semi ? "lg:my-[197px]" : ""} ${props.final ? "my-auto" : ""}`}
     >
       <div
         className={`absolute w-[15px] h-[1px] bg-[#bd9ac9] top-1/2 right-[-15px] ${
-          props.final ? "hidden" : "hidden sm:flex"
+          props.final ? "hidden" : "hidden lg:flex"
         }`}
       >
         <ChevronRight

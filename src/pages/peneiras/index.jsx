@@ -67,7 +67,7 @@ export default function Peneiras() {
           </p>
 
           <motion.div
-            className="grid grid-cols-1 md:grid-cols-4 gap-5"
+            className="grid grid-cols-1 lg:grid-cols-4 gap-5"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
@@ -221,7 +221,7 @@ export default function Peneiras() {
           </motion.p>
 
           <motion.div
-            className="grid grid-cols-1 md:grid-cols-4 gap-5"
+            className="grid grid-cols-1 lg:grid-cols-4 gap-5"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}

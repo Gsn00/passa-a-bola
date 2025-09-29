@@ -34,7 +34,7 @@ export default function HeaderMobile() {
         }`}
       ></div>
       <div
-        className={`w-[75vw] h-screen overflow-y-auto bg-white fixed z-30 top-0 right-0 shadow-xl flex flex-col transform transition-transform duration-300 ${
+        className={`w-[75vw] pb-40 h-screen overflow-y-auto bg-white fixed z-30 top-0 right-0 shadow-xl flex flex-col transform transition-transform duration-300 ${
           opened ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -50,7 +50,7 @@ export default function HeaderMobile() {
             <a
               key={idx}
               href={item.href}
-              className="py-4 text-lg text-gray-700 border-b border-gray-100 hover:text-purple-700 hover:pl-2 transition-all"
+              className="py-4 text-lg text-gray-700 border-b border-gray-100 hover:text-purple-700 active:pl-2 transition-all"
               onClick={(e) => {
                 e.preventDefault();
                 const url = e.currentTarget.getAttribute("href");

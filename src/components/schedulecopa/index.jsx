@@ -19,15 +19,15 @@ export default function ScheduleCopa() {
   };
 
   return (
-    <section className="py-12 px-4 md:px-8 select-none">
-      <div className="flex flex-col md:grid md:grid-cols-4 gap-5">
+    <section className="py-12 md:px-8 select-none">
+      <div className="flex flex-col lg:grid lg:grid-cols-4 gap-5">
         <motion.div
           ref={oitavasRef}
           initial="hidden"
           animate={oitavasInView ? "visible" : "hidden"}
           variants={fadeSlide}
           transition={{ staggerChildren: 0.1 }}
-          className="flex flex-col gap-3 bg-[#690a6c]/10 p-3 rounded-xl shadow-lg transition-transform duration-300 hover:scale-102 hover:shadow-xl"
+          className="flex flex-col gap-3 bg-[#690a6c]/10 p-3 rounded-2xl shadow-lg transition-transform duration-300 hover:scale-102 hover:shadow-xl"
         >
           <h2 className="font-bold text-3xl text-[#854d97]! mx-auto mb-5">
             Oitavas de Final
@@ -96,7 +96,7 @@ export default function ScheduleCopa() {
           animate={quartasInView ? "visible" : "hidden"}
           variants={fadeSlide}
           transition={{ staggerChildren: 0.1, delay: 0.2 }}
-          className="flex flex-col gap-3 bg-[#690a6c]/15 p-3 rounded-xl shadow-lg transition-transform duration-300 hover:scale-102 hover:shadow-xl"
+          className="flex flex-col gap-3 bg-[#690a6c]/15 p-3 rounded-2xl shadow-lg transition-transform duration-300 hover:scale-102 hover:shadow-xl"
         >
           <h2 className="font-bold text-3xl text-[#854d97]! mx-auto mb-5">
             Quartas de Final
@@ -141,7 +141,7 @@ export default function ScheduleCopa() {
           animate={semiInView ? "visible" : "hidden"}
           variants={fadeSlide}
           transition={{ staggerChildren: 0.1, delay: 0.4 }}
-          className="flex flex-col gap-3 bg-[#690a6c]/20 p-3 rounded-xl shadow-lg transition-transform duration-300 hover:scale-102 hover:shadow-xl"
+          className="flex flex-col gap-3 bg-[#690a6c]/20 p-3 rounded-2xl shadow-lg transition-transform duration-300 hover:scale-102 hover:shadow-xl"
         >
           <h2 className="font-bold text-3xl text-[#854d97]! mx-auto mb-5">
             Semifinais
@@ -170,15 +170,15 @@ export default function ScheduleCopa() {
           animate={finalInView ? "visible" : "hidden"}
           variants={fadeSlide}
           transition={{ staggerChildren: 0.1, delay: 0.6 }}
-          className="flex flex-col gap-3 bg-[#690a6c]/25 p-3 rounded-xl shadow-lg relative transition-transform duration-300 hover:scale-102 hover:shadow-xl"
+          className="flex flex-col gap-3 bg-[#690a6c]/25 p-3 rounded-2xl shadow-lg relative transition-transform duration-300 hover:scale-102 hover:shadow-xl"
         >
-          <h2 className="font-bold text-3xl text-[#854d97]! mx-auto mb-5 block md:hidden">
+          <h2 className="font-bold text-3xl text-[#854d97]! mx-auto mb-5 block lg:hidden">
             Final
           </h2>
-          <h2 className="font-bold text-[150px] italic text-[#690a6c]/50! mx-auto mb-5 rotate-90 absolute top-[10%] left-[-20px] hidden md:block">
+          <h2 className="font-bold text-[150px] italic text-[#690a6c]/50! mx-auto mb-5 rotate-90 absolute top-[10%] left-[-20px] hidden lg:block">
             Final
           </h2>
-          <h2 className="font-bold text-[150px] italic text-[#690a6c]/50! mx-auto mb-5 rotate-90 absolute bottom-[10%] left-[-20px] hidden md:block">
+          <h2 className="font-bold text-[150px] italic text-[#690a6c]/50! mx-auto mb-5 rotate-90 absolute bottom-[10%] left-[-20px] hidden lg:block">
             Final
           </h2>
           <CardChaveamento

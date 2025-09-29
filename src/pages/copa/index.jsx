@@ -9,6 +9,8 @@ import { motion, useInView } from "motion/react";
 import { useRef } from "react";
 import ActionButton from "../../components/actionbutton";
 import CardQuestion from "../../components/cardquestion";
+import CardResumo from "./cardresumo";
+import { GraduationCap, Handshake, Trophy } from "lucide-react";
 
 export default function Copa() {
   const leftRef = useRef(null);
@@ -49,49 +51,71 @@ export default function Copa() {
 
         <SectionTitle textgray="A Copa do" textpurple="Passa a Bola" />
 
-        <div className="flex flex-col lg:flex-row px-5 lg:px-30 mb-5 gap-10">
+        <div className="flex flex-col gap-5 py-10 border-5 border-[#690a6c]/5 bg-white/40 rounded-[40px] px-5 mb-20">
+          <h1 className="text-4xl md:text-5xl font-bold text-[#690a6c]! w-full text-center pb-5">
+            Muito mais que um torneio
+          </h1>
           <motion.div
-            ref={leftRef}
-            className="relative w-full lg:w-[50%] border-5 border-[#f7edf7] bg-[#f7edf7]/55 rounded-4xl"
-            initial={{ opacity: 0, y: 20 }}
-            animate={leftInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.5, delay: 0.6 }}
+            className="grid grid-cols-1 lg:grid-cols-3 gap-5"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
           >
-            <p className="text-justify w-full sm:text-xl tracking-wide font-[League_Spartan] bg-[#fbf7fb] p-8 rounded-4xl shadow-lg relative top-4 left-3">
-              A Copa Passa a Bola é o principal torneio organizado pela
-              comunidade Passa a Bola, pensado para fortalecer o futebol
-              feminino em todas as suas formas — do recreativo ao competitivo.
-              Nascida como um encontro entre amigas e times locais, a Copa
-              cresceu para reunir equipes de várias regiões do Brasil,
-              promovendo esporte, respeito e trocas técnicas.
-            </p>
-          </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 50, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              <CardResumo
+                title={"O que é"}
+                description={
+                  "Torneio que conecta jogadoras de todo o Brasil, fortalecendo o futebol feminino em todas as suas formas."
+                }
+                icon={Trophy}
+              />
+            </motion.div>
 
-          <motion.div
-            ref={rightRef}
-            className="relative w-full lg:w-[50%] border-5 border-[#fbf7fb] bg-[#fbf7fb]/55 rounded-4xl sm:top-[85px]"
-            initial={{ opacity: 0, y: 20 }}
-            animate={rightInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.5, delay: 0.8 }}
-          >
-            <p className="text-justify sm:text-xl w-full tracking-wide font-[League_Spartan] bg-[#f7edf7] p-8 rounded-4xl shadow-lg relative top-4 right-3">
-              Nossa missão é criar um ambiente seguro, inclusivo e de alto
-              astral, onde jogadoras possam desenvolver habilidades, conhecer
-              outras atletas e ganhar visibilidade. O evento prioriza fair play,
-              arbitragem qualificada, e ações educativas (oficinas, palestras e
-              rodas de conversa sobre saúde e protagonismo feminino).
-            </p>
+            <motion.div
+              initial={{ opacity: 0, y: 50, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <CardResumo
+                title={"Como é o ambiente"}
+                description={
+                  "Espaço acolhedor e inclusivo, feito para desenvolver talentos e criar novas conexões."
+                }
+                icon={Handshake}
+              />
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 50, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              <CardResumo
+                title={"O diferencial"}
+                description={
+                  "Fair play, arbitragem qualificada e atividades educativas que valorizam o protagonismo feminino."
+                }
+                icon={GraduationCap}
+              />
+            </motion.div>
           </motion.div>
         </div>
 
-        <div className="flex flex-col lg:flex-row px-5 lg:px-30 max-md:mt-10 gap-10 md:pt-30">
-          <div className="w-full gap-5 text-center flex flex-col-reverse md:flex-col">
+        <div className="flex flex-col lg:flex-row px-5 lg:px-30 max-md:mt-10 gap-10">
+          <div className="w-full gap-5 text-center flex flex-col-reverse lg:flex-col">
             <motion.div
               ref={videoLeftRef}
               className="relative w-full border-5 border-[#f7edf7] bg-[#f7edf7]/55 rounded-4xl"
               initial={{ opacity: 0, y: 20 }}
               animate={videoLeftInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 1.2 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
             >
               <video
                 autoPlay
@@ -104,11 +128,11 @@ export default function Copa() {
                 <source src="/videos/copa01.mp4" type="video/mp4" />
               </video>
             </motion.div>
-            <div className="text-xl md:text-4xl">
+            <div className="text-2xl md:text-4xl">
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={videoLeftInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: 1.4 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
                 className="font-[Montserrat] md:mr-10"
               >
                 #MulheresNoEsporte
@@ -117,7 +141,7 @@ export default function Copa() {
               <motion.h1
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={videoLeftInView ? { opacity: 1, scale: 1 } : {}}
-                transition={{ duration: 0.6, delay: 1.6 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
                 className="font-[Montserrat] text-[#690A6C]!"
               >
                 #MulheresNoEsporte
@@ -137,11 +161,11 @@ export default function Copa() {
           </div>
 
           <div className="w-full space-y-5 text-center md:pt-15">
-            <div className="text-xl md:text-4xl">
+            <div className="text-2xl md:text-4xl">
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={videoLeftInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: 1.4 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
                 className="font-[Montserrat] md:mr-10"
               >
                 #FutebolFeminino
@@ -150,7 +174,7 @@ export default function Copa() {
               <motion.h1
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={videoLeftInView ? { opacity: 1, scale: 1 } : {}}
-                transition={{ duration: 0.6, delay: 1.6 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
                 className="font-[Montserrat] text-[#690A6C]!"
               >
                 #FutebolFeminino
@@ -161,7 +185,7 @@ export default function Copa() {
                 animate={
                   videoLeftInView ? { opacity: [0, 1, 0] } : { opacity: 0 }
                 }
-                transition={{ duration: 3, repeat: Infinity, delay: 2 }}
+                transition={{ duration: 3, repeat: Infinity, delay: 0.2 }}
                 className="font-[Montserrat] md:ml-10 text-transparent! bg-clip-text bg-gradient-to-b from-[#cb6aaa]! to-transparent"
               >
                 #FutebolFeminino
@@ -172,7 +196,7 @@ export default function Copa() {
               className="relative w-full border-5 border-[#fbf7fb] bg-[#fbf7fb]/55 rounded-4xl"
               initial={{ opacity: 0, y: 20 }}
               animate={videoRightInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 1.4 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
             >
               <video
                 autoPlay
