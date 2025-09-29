@@ -49,6 +49,10 @@
   color: #2d2d2d;
 }
 
+html {
+  color-scheme: light;
+}
+
 html,
 body {
   width: 100%;
