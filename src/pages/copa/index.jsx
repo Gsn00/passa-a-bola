@@ -42,11 +42,13 @@ export default function Copa() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <img
-            className="w-full object-cover max-lg:h-[50vh] rounded-[40px]"
-            src="/images/copa-01.png"
-            alt=""
-          />
+          <div className="flex flex-col gap-5 p-2 border-5 border-[#690a6c]/20 rounded-[40px] mb-20">
+            <img
+              className="w-full object-cover max-lg:h-[50vh] rounded-[30px]"
+              src="/images/copa_banner.jpg"
+              alt=""
+            />
+          </div>
         </motion.div>
 
         <SectionTitle textgray="A Copa do" textpurple="Passa a Bola" />
