@@ -4,7 +4,7 @@ import Polaroid from "../../components/polaroid";
 
 export default function Content02() {
   return (
-    <div className="w-full h-fit lg:h-[70vh] flex flex-col lg:flex-row">
+    <div className="w-full h-fit lg:h-[68vh] flex flex-col lg:flex-row">
       <div className="w-full lg:w-[50%] h-full flex flex-col gap-10 justify-center px-10 lg:px-30">
         <motion.h1
           initial={{ opacity: 0, y: -50 }}

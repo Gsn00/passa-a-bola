@@ -3,7 +3,7 @@ import ActionButton from "../../components/actionbutton";
 
 export default function Content01() {
   return (
-    <div className="w-full lg:h-[70vh] flex flex-col lg:flex-row">
+    <div className="w-full lg:h-[68vh] flex flex-col lg:flex-row">
       <div className="w-full lg:w-[50%] h-full flex flex-col gap-10 justify-center px-10 lg:px-30">
         <motion.h1
           initial={{ opacity: 0, y: -50 }}
@@ -18,7 +18,7 @@ export default function Content01() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-          className="tracking-widest font-[Poppins] text-sm lg:text-lg text-justify"
+          className="tracking-wide font-[Poppins] text-sm lg:text-lg text-justify"
         >
           O Passa a Bola nasceu com um propósito claro: fortalecer a presença
           das mulheres no futebol e abrir caminhos reais para quem sonha em ir
