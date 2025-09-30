@@ -34,58 +34,58 @@ export default function ScheduleCopa() {
           </h2>
           <CardChaveamento
             date="10/06/2025 - 16h00"
-            first="Flamengo"
+            first="Time A"
             firstgoals={3}
-            second="Palmeiras"
+            second="Time B"
             secondgoals={1}
           />
           <CardChaveamento
             date="10/06/2025 - 19h00"
-            first="Santos"
+            first="Time C"
             firstgoals={0}
-            second="Corinthians"
+            second="Time D"
             secondgoals={2}
           />
           <CardChaveamento
             date="11/06/2025 - 16h00"
-            first="Grêmio"
+            first="Time E"
             firstgoals={2}
-            second="Internacional"
+            second="Time F"
             secondgoals={1}
           />
           <CardChaveamento
             date="11/06/2025 - 19h00"
-            first="Athletico-PR"
+            first="Time G"
             firstgoals={1}
-            second="Fluminense"
+            second="Time H"
             secondgoals={3}
           />
           <CardChaveamento
             date="12/06/2025 - 16h00"
-            first="São Paulo"
+            first="Time I"
             firstgoals={2}
-            second="Vasco"
+            second="Time J"
             secondgoals={0}
           />
           <CardChaveamento
             date="12/06/2025 - 19h00"
-            first="Cruzeiro"
+            first="Time K"
             firstgoals={2}
-            second="Botafogo"
+            second="Time L"
             secondgoals={1}
           />
           <CardChaveamento
             date="13/06/2025 - 16h00"
-            first="Atlético-MG"
+            first="Time M"
             firstgoals={3}
-            second="Bahia"
+            second="Time N"
             secondgoals={0}
           />
           <CardChaveamento
             date="13/06/2025 - 19h00"
-            first="Fortaleza"
+            first="Time O"
             firstgoals={1}
-            second="Ceará"
+            second="Time P"
             secondgoals={2}
           />
         </motion.div>
@@ -103,33 +103,33 @@ export default function ScheduleCopa() {
           </h2>
           <CardChaveamento
             date="14/06/2025 - 16h00"
-            first="Flamengo"
+            first="Time A"
             firstgoals={2}
-            second="Corinthians"
+            second="Time D"
             secondgoals={1}
             quartas={true}
           />
           <CardChaveamento
             date="14/06/2025 - 19h00"
-            first="Grêmio"
+            first="Time E"
             firstgoals={0}
-            second="Fluminense"
+            second="Time H"
             secondgoals={1}
             quartas={true}
           />
           <CardChaveamento
             date="15/06/2025 - 16h00"
-            first="São Paulo"
+            first="Time I"
             firstgoals={3}
-            second="Cruzeiro"
+            second="Time K"
             secondgoals={2}
             quartas={true}
           />
           <CardChaveamento
             date="15/06/2025 - 19h00"
-            first="Atlético-MG"
+            first="Time M"
             firstgoals={3}
-            second="Ceará"
+            second="Time P"
             secondgoals={0}
             quartas={true}
           />
@@ -148,17 +148,17 @@ export default function ScheduleCopa() {
           </h2>
           <CardChaveamento
             date="16/06/2025 - 16h00"
-            first="Flamengo"
+            first="Time A"
             firstgoals={1}
-            second="Fluminense"
+            second="Time H"
             secondgoals={2}
             semi={true}
           />
           <CardChaveamento
             date="16/06/2025 - 19h00"
-            first="São Paulo"
+            first="Time I"
             firstgoals={2}
-            second="Atlético-MG"
+            second="Time M"
             secondgoals={0}
             semi={true}
           />
@@ -183,9 +183,9 @@ export default function ScheduleCopa() {
           </h2>
           <CardChaveamento
             date="17/06/2025 - 16h00"
-            first="Fluminense"
+            first="Time H"
             firstgoals={1}
-            second="São Paulo"
+            second="Time I"
             secondgoals={2}
             final={true}
           />
