@@ -20,6 +20,7 @@ import CardBeneficio from "./cardbeneficio";
 import CardDepoimento from "./carddepoimento";
 import CardDica from "./carddica";
 import CardQuestion from "../../components/cardquestion";
+import CardAprovada from "./cardaprovada";
 
 export default function Peneiras() {
   return (
@@ -191,6 +192,73 @@ export default function Peneiras() {
               />
             </motion.div>
           </motion.div>
+        </motion.div>
+
+        <motion.div
+          className="flex flex-col gap-5 py-10 px-5 mb-20"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+        >
+          <h1 className="text-4xl md:text-5xl font-bold w-full text-center">
+            Nossas estrelas aprovadas na Peneira!
+          </h1>
+
+          <p className="text-2xl text-center max-w-[800px] mx-auto">
+            Conheça algumas das jogadoras que brilharam e foram aprovadas em
+            nossa peneira online.
+          </p>
+
+          <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            <motion.div
+              initial={{ opacity: 0, y: 50, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              <CardAprovada
+                name={"Julia Souza"}
+                position={"Meio-campista"}
+                age={22}
+                video={"/videos/peneira01.mp4"}
+              />
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 50, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <CardAprovada
+                name={"Amanda Nogueira"}
+                position={"Atacante"}
+                age={20}
+                video={"/videos/peneira02.mp4"}
+              />
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 50, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              <CardAprovada
+                name={"Beatriz Lima"}
+                position={"Zagueira"}
+                age={18}
+                video={"/videos/peneira03.mp4"}
+              />
+            </motion.div>
+          </motion.div>
+
+          <div className="text-center mt-10">
+            <ActionButton
+              className="max-w-[550px]"
+              title={"Ver todas as participantes"}
+            />
+          </div>
         </motion.div>
 
         <motion.div
