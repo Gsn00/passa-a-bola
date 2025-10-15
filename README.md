@@ -1,5 +1,3 @@
-repositorio privado
-
 # Membros do grupo
 
 - Artur Rodrigues Trindade Paes – RM 564309
